@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "One Dark",
+  "theme": "Ayu Dark",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -29,6 +29,14 @@
   "language_overrides": {
     "Ruby": {
       "tab_size": 2
+    }
+  },
+  // LSP
+  "lsp": {
+    "solargraph": {
+      "initialization_options": {
+        "formatting": true
+      }
     }
   }
 }
