@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Ayu Dark",
+  "theme": "One Dark",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -27,6 +27,9 @@
   "format_on_save": "on",
   // Language Overrides
   "language_overrides": {
+    "HTML": {
+      "format_on_save": "off"
+    },
     "Ruby": {
       "tab_size": 2
     }
