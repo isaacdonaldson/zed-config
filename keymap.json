@@ -1,5 +1,11 @@
 [
   {
+    "bindings": {
+      "cmd-[": "pane::ActivatePrevItem",
+      "cmd-]": "pane::ActivateNextItem"
+    }
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "ctrl-shift-tab": "tab_switcher::Toggle",
