@@ -1,0 +1,9 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-tab": "tab_switcher::Toggle",
+      "ctrl-tab": ["tab_switcher::Toggle", { "select_last": true }]
+    }
+  }
+]
