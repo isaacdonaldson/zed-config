@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "One Dark",
+  "theme": "Zedokai",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -24,13 +24,14 @@
     "dock": "right"
   },
   // Formatting
-  "format_on_save": "on",
+  "format_on_save": "off",
   // Language Overrides
   "language_overrides": {
     "HTML": {
       "format_on_save": "off"
     },
     "Ruby": {
+      "show_copilot_suggestions": true,
       "tab_size": 2
     }
   },
