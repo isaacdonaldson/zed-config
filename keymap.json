@@ -6,10 +6,20 @@
     }
   },
   {
-    "context": "Workspace",
+    "context": "Editor",
     "bindings": {
-      "ctrl-shift-tab": "tab_switcher::Toggle",
-      "ctrl-tab": ["tab_switcher::Toggle", { "select_last": true }]
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "up": "zed::NoAction",
+      "down": "zed::NoAction",
+      "left": "zed::NoAction",
+      "right": "zed::NoAction"
     }
   }
 ]
