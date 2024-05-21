@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "show_copilot_suggestions": false,
   "theme": "Zedokai",
   "telemetry": {
     "diagnostics": false,
@@ -24,19 +25,34 @@
   "project_panel": {
     "dock": "right"
   },
+  // Tabs
   "tab_bar": {
-    "show_nav_history_buttons": false,
+    // "show": false,
+    "show_nav_history_buttons": false
+  },
+  // "tabs": {
+  //   "git_status": true
+  // },
+  "toolbar": {
+    "quick_actions": false
   },
   // Formatting
   "format_on_save": "off",
+  // Autoclose brackets and quotations when typing a single one
+  "use_autoclose": false,
   // Language Overrides
   "language_overrides": {
     "HTML": {
       "format_on_save": "off"
     },
     "Ruby": {
-      "show_copilot_suggestions": true,
+      "format_on_save": "on",
+      "show_copilot_suggestions": false,
       "tab_size": 2
+    },
+    "JavaScript": {
+      "format_on_save": "off",
+      "show_copilot_suggestions": false
     }
   },
   // LSP
