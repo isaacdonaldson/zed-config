@@ -129,7 +129,7 @@
             "color": "#ff6188"
           },
           "embedded": {
-            "color": "#fcf"
+            "color": "#ab9df2"
           },
           "emphasis": {
             "font_style": "italic"
@@ -167,6 +167,9 @@
           },
           "preproc": {
             "color": "#ab9df2"
+          },
+          "primary": {
+            "color": "#fcfcfa"
           },
           "property": {
             "color": "#fcfcfa"
@@ -213,12 +216,27 @@
           "type": {
             "color": "#78dce8"
           },
+          "type.interface": {
+            "color": "#78dce8"
+          },
+          "type.super": {
+            "color": "#78dce8"
+          },
           "variable": {
             "color": "#fcfcfa"
+          },
+          "variable.member": {
+            "color": "#fcfcfa"
+          },
+          "variable.parameter": {
+            "color": "#fc9876"
           },
           "variable.special": {
             "color": "#c1c0c0",
             "font_style": "italic"
+          },
+          "variant": {
+            "color": "#ab9df2"
           }
         },
         "terminal.ansi.black": "#403e41",
