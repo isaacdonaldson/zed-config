@@ -68,8 +68,8 @@
         "elevated_surface.background": "#333034",
         "ghost_element.hover": "#fcfcfa0c",
         "ghost_element.selected": "#fcfcfa0c",
-        "text": "#fcfcfa",
-        "text.accent": "#ffd866",
+        "text": "#ffd866",
+        "text.accent": "#fcfcfa",
         "text.muted": "#939293",
         "conflict": "#78dce8",
         "created": "#a9dc76",
@@ -237,7 +237,7 @@
         "terminal.ansi.red": "#ff6188",
         "terminal.ansi.white": "#fcfcfa",
         "terminal.ansi.yellow": "#ffd866",
-        "terminal.background": "#2d2a2e",
+        "terminal.background": "#2d2a2e"
       }
     }
   ]
