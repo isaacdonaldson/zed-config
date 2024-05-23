@@ -1,0 +1,11 @@
+# Ignore Everything
+*
+
+# Include .gitignore
+!.gitignore
+
+# Add back settings
+!settings.json
+!keymap.json
+
+!themes/*
