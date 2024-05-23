@@ -51,6 +51,11 @@
         "panel.background": "#333034",
         "players": [
           {
+            "background": "#ffd866",
+            "cursor": "#ffd866",
+            "selection": "#fcfcfa1a"
+          },
+          {
             "background": "#fcfcfa",
             "cursor": "#fcfcfa",
             "selection": "#fcfcfa1a"
@@ -69,11 +74,6 @@
             "background": "#fc9867",
             "cursor": "#fc9867",
             "selection": "#fc98671a"
-          },
-          {
-            "background": "#ffd866",
-            "cursor": "#ffd866",
-            "selection": "#ffd8661a"
           },
           {
             "background": "#ab9df2",
