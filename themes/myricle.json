@@ -4,7 +4,7 @@
   "author": "Isaac Donaldson",
   "themes": [
     {
-      "name": "Zedokai",
+      "name": "Myricle",
       "appearance": "dark",
       "style": {
         "background": "#2d2a2e",
@@ -20,7 +20,7 @@
         "deleted": "#ff6188",
         "drop_target.background": "#221f22bf",
         "editor.active_line.background": "#fcfcfa0c",
-        "editor.active_line_number": "#fcfcfa",
+        "editor.active_line_number": "#ffd866",
         "editor.active_wrap_guide": "#2d2a2e",
         "editor.background": "#2d2a2e",
         "editor.foreground": "#fcfcfa",
@@ -95,6 +95,9 @@
         "search.match_background": "#434044",
         "status_bar.background": "#333034",
         "surface.background": "#403e41",
+        "tab.active_background": "#2d2a2e",
+        "tab.inactive_background": "#333034",
+        "tab_bar.background": "#333034",
         "syntax": {
           "attribute": {
             "color": "#fc9867",
@@ -210,9 +213,6 @@
             "font_style": "italic"
           }
         },
-        "tab.active_background": "#2d2a2e",
-        "tab.inactive_background": "#333034",
-        "tab_bar.background": "#333034",
         "terminal.ansi.black": "#403e41",
         "terminal.ansi.blue": "#fc9867",
         "terminal.ansi.bright_black": "#727072",

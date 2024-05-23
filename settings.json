@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   "show_copilot_suggestions": false,
-  "theme": "Zedokai",
+  "theme": "Myricle",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
