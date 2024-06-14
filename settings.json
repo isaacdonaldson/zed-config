@@ -23,7 +23,7 @@
   },
   // File Tree
   "project_panel": {
-    "dock": "right"
+    "dock": "left"
   },
   // Tabs
   "tab_bar": {
@@ -64,6 +64,7 @@
     }
   },
   "terminal": {
+    "dock": "right",
     "option_as_meta": true
   }
 }
