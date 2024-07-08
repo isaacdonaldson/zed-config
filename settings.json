@@ -62,5 +62,9 @@
         "formatting": true
       }
     }
+  },
+  "terminal": {
+    "dock": "bottom",
+    "option_as_meta": true
   }
 }
