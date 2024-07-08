@@ -107,6 +107,9 @@
         "title_bar.background": "#3d3a3e",
         "toolbar.background": "#2d2a2e",
         "syntax": {
+          "background_color": {
+            "color": "#ffd866"
+          },
           "attribute": {
             "color": "#fc9867",
             "font_style": "italic"

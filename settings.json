@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "show_copilot_suggestions": false,
+  "show_inline_completions": false,
   "theme": "Myricle",
   "telemetry": {
     "diagnostics": false,
@@ -41,18 +41,18 @@
   // Autoclose brackets and quotations when typing a single one
   "use_autoclose": false,
   // Language Overrides
-  "language_overrides": {
+  "languages": {
     "HTML": {
       "format_on_save": "off"
     },
     "Ruby": {
       "format_on_save": "on",
-      "show_copilot_suggestions": false,
+      "show_inline_completions": false,
       "tab_size": 2
     },
     "JavaScript": {
       "format_on_save": "off",
-      "show_copilot_suggestions": false
+      "show_inline_completions": false
     }
   },
   // LSP
