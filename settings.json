@@ -15,7 +15,8 @@
   },
   "vim_mode": true,
   "ui_font_size": 12,
-  "ui_font_family": "Zed Sans",
+  "ui_font_family": "JetBrains Mono NL",
+  "buffer_font_family": "JetBrains Mono NL",
   "buffer_font_size": 12,
   "buffer_font_features": {
     "calt": false,
@@ -42,6 +43,9 @@
   "use_autoclose": false,
   // Language Overrides
   "languages": {
+    "Go": {
+      "show_inline_completions": true
+    },
     "HTML": {
       "format_on_save": "off"
     },
