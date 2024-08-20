@@ -7,42 +7,74 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  // Vim emulation mode
+  "vim_mode": true,
+  // Whether or not AI suggestions are shown
   "show_inline_completions": false,
+  // Editor theme: Myricle is custom
   "theme": "Myricle",
+  // Telemetry
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
-  "vim_mode": true,
-  "ui_font_size": 12,
-  "ui_font_family": "JetBrains Mono NL",
-  "buffer_font_family": "JetBrains Mono NL",
-  "buffer_font_size": 12,
+  // Fonts
+  "ui_font_size": 14,
+  "ui_font_family": "Berkeley Mono Variable",
+  "buffer_font_family": "Berkeley Mono Variable",
+  "buffer_font_fallbacks": ["Berkeley Mono", "JetBrains Mono NL"],
+  "buffer_font_size": 14,
   "buffer_font_features": {
     "calt": false,
+    "liga": false,
+    "dlig": false,
+    "ss02": true,
     "zero": true
+  },
+  "buffer_line_height": {
+    "custom": 1.3
   },
   // File Tree
   "project_panel": {
-    "dock": "right"
+    "dock": "left"
+  },
+  // Terminal
+  "terminal": {
+    "dock": "bottom",
+    "font_family": "Berkeley Mono Variable",
+    "font_size": 14,
+    "line_height": "standard",
+    "option_as_meta": true
+  },
+  // Git Blame
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
   },
   // Tabs
   "tab_bar": {
-    // "show": false,
     "show_nav_history_buttons": false
   },
-  // "tabs": {
-  //   "git_status": true
-  // },
   "toolbar": {
     "quick_actions": false
   },
   // Formatting
-  "format_on_save": "off",
+  "format_on_save": "on",
   // Autoclose brackets and quotations when typing a single one
-  "use_autoclose": false,
+  "use_autoclose": true,
   // Language Overrides
   "languages": {
+    "TypeScript": {
+      "show_inline_completions": true
+    },
+    "Lua": {
+      "show_inline_completions": true,
+      "tab_size": 2
+    },
+    "Zig": {
+      "show_inline_completions": true
+    },
     "Go": {
       "show_inline_completions": true
     },
@@ -66,9 +98,5 @@
         "formatting": true
       }
     }
-  },
-  "terminal": {
-    "dock": "bottom",
-    "option_as_meta": true
   }
 }
