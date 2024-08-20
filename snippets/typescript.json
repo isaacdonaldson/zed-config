@@ -1,0 +1,12 @@
+{
+  "log": {
+    "body": "console.log({$1})",
+    "prefix": ["log", "console"],
+    "description": "Log to the console"
+  },
+  "try-catch": {
+    "body": ["try {", "  $1", "} catch (err) {", "  $2", "}"],
+    "prefix": ["try", "catch"],
+    "description": "Try catch block"
+  }
+}

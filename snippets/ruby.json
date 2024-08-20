@@ -1,0 +1,22 @@
+{
+  "module and class with initializer": {
+    "body": [
+      "module $1",
+      "  class $2",
+      "    def initialize(",
+      "      $3:$3.new",
+      "    )",
+      "      @$3 = $3",
+      "    end",
+      "  end",
+      "end"
+    ],
+    "prefix": ["modclassinit", "modinit", "initializer"],
+    "description": "Defines a module and a class with an initializer that takes named a variable and assigns it as an instance variable"
+  },
+  "binding.pry": {
+    "body": "binding.pry",
+    "prefix": ["bind", "pry", "bp"],
+    "description": "Inserts a binding.pry call for debugging"
+  }
+}

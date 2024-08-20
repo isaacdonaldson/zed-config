@@ -9,3 +9,6 @@
 !keymap.json
 
 !themes/
+!themes/*
+!snippets/
+!snippets/*
