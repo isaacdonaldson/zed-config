@@ -20,6 +20,8 @@
   },
   // Vim emulation mode
   "vim_mode": true,
+  // Cursor stays solid
+  "cursor_blink": false,
   // Whether or not AI suggestions are shown
   "show_inline_completions": false,
   // Editor theme: Myricle is custom
@@ -30,6 +32,9 @@
     "coloring": "indent_aware",
     "background_coloring": "disabled"
   },
+  // Line wrapping
+  "preferred_line_length": 90,
+  "soft_wrap": "preferred_line_length",
   // Telemetry
   "telemetry": {
     "diagnostics": false,
@@ -61,12 +66,17 @@
     "font_family": "Berkeley Mono Variable",
     "font_size": 14,
     "line_height": "standard",
-    "option_as_meta": true
+    "option_as_meta": true,
+    "working_directory": "current_project_directory",
+    "toolbar": {
+      "title": false
+    }
   },
   // Git Blame
   "git": {
     "inline_blame": {
-      "enabled": false
+      "enabled": false,
+      "delay_ms": 500
     }
   },
   // Tabs
@@ -77,7 +87,7 @@
     "quick_actions": false
   },
   // Formatting
-  "format_on_save": "on",
+  "format_on_save": "off",
   // Autoclose brackets and quotations when typing a single one
   "use_autoclose": true,
   // Language Overrides

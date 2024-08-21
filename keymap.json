@@ -21,12 +21,42 @@
   },
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
+    // Put key-bindings here if you want them to work in normal & visual mode
     "bindings": {
-      // put key-bindings here if you want them to work in normal & visual mode
+      // Disable arrow key navigation
       "up": "zed::NoAction",
       "down": "zed::NoAction",
       "left": "zed::NoAction",
-      "right": "zed::NoAction"
+      "right": "zed::NoAction",
+
+      // Toggle git blame
+      "space g b": "editor::ToggleGitBlameInline",
+      // Find file
+      "space f f": "file_finder::Toggle",
+      // Find words
+      "space f w": "workspace::NewSearch",
+      // Format file
+      "space u f": "editor::Format",
+      // Toggle left dock (file-tree)
+      "space e": "workspace::ToggleLeftDock",
+      // Toggle comments
+      "space /": "editor::ToggleComments",
+      // Navigating through matches
+      "n": "search::SelectNextMatch",
+      "shift-n": "search::SelectPrevMatch",
+      // Open terminal as tab
+      "space t": "workspace::NewCenterTerminal",
+      // Close current buffer (tab)
+      "space b d": "pane::CloseActiveItem",
+      // Navigate to the buffer (tab) on the left or right
+      "[ b": "pane::ActivatePrevItem",
+      "] b": "pane::ActivateNextItem",
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal"
     }
   }
 ]
