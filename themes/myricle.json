@@ -44,6 +44,15 @@
             "selection": "#78dce81a"
           }
         ],
+        "accents": [
+          "#ab9df2",
+          "#ffccff",
+          "#78dce8",
+          "#a9dc76",
+          "#ffd866",
+          "#fc9867",
+          "#ff6188"
+        ],
         "background": "#2d2a2e",
         "background.appearance": "opaque",
         "border": "#474448",
@@ -105,6 +114,7 @@
         "tab.inactive_background": "#333034",
         "tab_bar.background": "#333034",
         "title_bar.background": "#3d3a3e",
+        "title_bar.inactive_background": "#333034",
         "toolbar.background": "#2d2a2e",
         "syntax": {
           "background_color": {

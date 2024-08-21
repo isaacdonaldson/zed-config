@@ -17,6 +17,12 @@
   "show_inline_completions": false,
   // Editor theme: Myricle is custom
   "theme": "Myricle",
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 2,
+    "coloring": "indent_aware",
+    "background_coloring": "disabled"
+  },
   // Telemetry
   "telemetry": {
     "diagnostics": false,
