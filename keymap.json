@@ -31,6 +31,11 @@
 
       // Toggle git blame
       "space g b": "editor::ToggleGitBlameInline",
+      // Toggle git hunk
+      "space g h": "editor::ToggleHunkDiff",
+      // Go to next git hunk
+      "[ h": "editor::GoToHunk",
+      "] h": "editor::GoToPrevHunk",
       // Find file
       "space f f": "file_finder::Toggle",
       // Find words
@@ -51,6 +56,14 @@
       // Navigate to the buffer (tab) on the left or right
       "[ b": "pane::ActivatePrevItem",
       "] b": "pane::ActivateNextItem",
+      // Rename variable
+      "space c r": "editor::Rename",
+      // Display diagnostic inline
+      "space c d": "editor::Hover",
+      // Split Panel to the right
+      "space |": "pane::SplitRight",
+      // Split Panel to the bottom
+      "space \\": "pane::SplitDown"
     }
   },
   {
