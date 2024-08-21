@@ -1,8 +1,15 @@
 [
   {
     "bindings": {
+      // Move between tabs
       "cmd-[": "pane::ActivatePrevItem",
-      "cmd-]": "pane::ActivateNextItem"
+      "cmd-]": "pane::ActivateNextItem",
+
+      // Switch focus on windows
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
     }
   },
   {

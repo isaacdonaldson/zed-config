@@ -7,6 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  // Show first window draw time and FPS
+  "performance": {
+    "show_in_status_bar": false
+  },
   // Vim emulation mode
   "vim_mode": true,
   // Whether or not AI suggestions are shown
