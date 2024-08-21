@@ -15,6 +15,7 @@
   {
     "context": "Editor",
     "bindings": {
+      // Allow selected or single lines to be moved as a group up and down
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown"
     }
@@ -28,6 +29,14 @@
       "down": "zed::NoAction",
       "left": "zed::NoAction",
       "right": "zed::NoAction",
+
+      // LSP code actions
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
 
       // Toggle git blame
       "space g b": "editor::ToggleGitBlameInline",
@@ -43,14 +52,16 @@
       // Format file
       "space u f": "editor::Format",
       // Toggle left dock (file-tree)
-      "space e": "workspace::ToggleLeftDock",
+      "space e": "pane::RevealInProjectPanel",
       // Toggle comments
       "space /": "editor::ToggleComments",
       // Navigating through matches
       "n": "search::SelectNextMatch",
       "shift-n": "search::SelectPrevMatch",
+      // Open horizontal terminal
+      "space t h": "workspace::NewTerminal",
       // Open terminal as tab
-      "space t": "workspace::NewCenterTerminal",
+      "space t c": "workspace::NewCenterTerminal",
       // Close current buffer (tab)
       "space b d": "pane::CloseActiveItem",
       // Navigate to the buffer (tab) on the left or right
@@ -63,13 +74,36 @@
       // Split Panel to the right
       "space |": "pane::SplitRight",
       // Split Panel to the bottom
-      "space \\": "pane::SplitDown"
+      "space \\": "pane::SplitDown",
+      // Open markdown previewer
+      "space m v": "markdown::OpenPreviewToTheSide",
+      // Toggle bottom dock (terminal)
+      "ctrl-\\": "workspace::ToggleBottomDock"
+    }
+  },
+  // File panel (netrw)
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      // Close project panel as project file panel on the left
+      "q": "workspace::ToggleLeftDock",
+      "space e": "workspace::ToggleLeftDock",
+      // Toggle bottom dock (terminal)
+      "ctrl-\\": "workspace::ToggleBottomDock"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
-      "cmd-t": "workspace::NewTerminal"
+      "cmd-t": "workspace::NewTerminal",
+      "ctrl-\\": "workspace::ToggleBottomDock"
     }
   }
 ]
