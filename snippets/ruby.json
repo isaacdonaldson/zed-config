@@ -1,14 +1,14 @@
 {
   "module and class with initializer": {
     "body": [
-      "module $1",
-      "  class $2",
-      "    def initialize(",
-      "      $3:$3.new",
-      "    )",
-      "      @$3 = $3",
-      "    end",
-      "  end",
+      "module Modyul",
+      "\tclass Klass",
+      "\t\tdef initialize(",
+      "\t\t\tthing: Thing.new",
+      "\t\t)",
+      "\t\t@thing = thing",
+      "\t\tend",
+      "\tend",
       "end"
     ],
     "prefix": ["modclassinit", "modinit", "initializer"],

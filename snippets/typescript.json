@@ -1,7 +1,7 @@
 {
   "log": {
     "body": "console.log({$1})",
-    "prefix": ["log", "console"],
+    "prefix": ["log", "console", "con", "cl"],
     "description": "Log to the console"
   },
   "try-catch": {
