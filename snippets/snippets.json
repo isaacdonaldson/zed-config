@@ -12,9 +12,12 @@
       "",
       "# Add back folders",
       "!src/",
-      "!src/*"
+      "!src/**/*"
     ],
-    "prefix": ["ignore", "git"],
+    "prefix": [
+      "ignore",
+      "git"
+    ],
     "description": ".gitignore skeleton"
   }
 }
