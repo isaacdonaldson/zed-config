@@ -11,5 +11,15 @@
     "reveal": "always",
     "hide": "never",
     "shell": "system"
+  },
+  {
+    "label": "Git history of repo (optional commit start, restores to current branch & commit)",
+    "command": "bash -c 'BRANCH=$(git symbolic-ref --short -q HEAD); COMMIT=$(git rev-parse HEAD); START=${BRANCH:-${COMMIT:-\"main\"}}; echo \"Commit Hash\"; read HASH; [[ $HASH ]] && HASH=^$HASH^; for commit in $(git rev-list $START $HASH --reverse); do git checkout $commit; read; done; git checkout $START'",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
   }
+
 ]
