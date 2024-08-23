@@ -24,6 +24,10 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     // Put key-bindings here if you want them to work in normal & visual mode
     "bindings": {
+      // Allow j and k to navigate over wrapped lines
+      "j": ["vim::Down", { "displayLines": true }],
+      "k": ["vim::Up", { "displayLines": true }],
+
       // Disable arrow key navigation
       "up": "zed::NoAction",
       "down": "zed::NoAction",
@@ -37,6 +41,14 @@
       "g I": "editor::GoToImplementationSplit",
       "g t": "editor::GoToTypeDefinition",
       "g T": "editor::GoToTypeDefinitionSplit",
+
+      // Split panel in direction
+      "space s d": "pane::SplitDown",
+      "space s l": "pane::SplitLeft",
+      "space s r": "pane::SplitRight",
+      "space s u": "pane::SplitUp",
+      "space |": "pane::SplitRight", // To the right
+      "space \\": "pane::SplitDown", // To the left
 
       // Toggle git blame
       "space g b": "editor::ToggleGitBlameInline",
@@ -71,10 +83,6 @@
       "space c r": "editor::Rename",
       // Display diagnostic inline
       "space c d": "editor::Hover",
-      // Split Panel to the right
-      "space |": "pane::SplitRight",
-      // Split Panel to the bottom
-      "space \\": "pane::SplitDown",
       // Open markdown previewer
       "space m v": "markdown::OpenPreviewToTheSide",
       // Toggle bottom dock (terminal)
