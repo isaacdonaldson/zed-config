@@ -13,3 +13,7 @@
 !themes/*
 !snippets/
 !snippets/*
+!prompts/
+!prompts/**/*
+!conversations/
+!conversations/**/*
