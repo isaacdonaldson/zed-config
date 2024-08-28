@@ -13,7 +13,7 @@
     "shell": "system"
   },
   {
-    "label": "Sync Zed Settings",
+    "label": "Sync down Zed settings",
     "command": "cd ~/.config/zed && git pull",
     //"args": [],
     "use_new_terminal": true,
