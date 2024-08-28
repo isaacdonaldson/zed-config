@@ -13,6 +13,19 @@
     "shell": "system"
   },
   {
+    "label": "Sync Zed Settings",
+    "command": "cd ~/.config/zed && git pull",
+    //"args": [],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    // What to do with the terminal pane and tab, after the command was started:
+    // * `always` — always show the terminal pane, add and focus the corresponding task's tab in it (default)
+    // * `never` — avoid changing current terminal pane focus, but still add/reuse the task's tab there
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
     "label": "Git history of repo (optional commit start, restores to current branch & commit)",
     "command": "bash -c 'BRANCH=$(git symbolic-ref --short -q HEAD); COMMIT=$(git rev-parse HEAD); START=${BRANCH:-${COMMIT:-\"main\"}}; echo \"Commit Hash\"; read HASH; [[ $HASH ]] && HASH=^$HASH^; for commit in $(git rev-list $START $HASH --reverse); do git checkout $commit; read; done; git checkout $START'",
     "use_new_terminal": true,
