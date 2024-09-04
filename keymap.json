@@ -86,7 +86,9 @@
       // Open markdown previewer
       "space m v": "markdown::OpenPreviewToTheSide",
       // Toggle bottom dock (terminal)
-      "ctrl-\\": "workspace::ToggleBottomDock"
+      "ctrl-\\": "workspace::ToggleBottomDock",
+      // Copy relative path
+      "space c p": "editor::CopyRelativePath"
     }
   },
   // File panel (netrw)
