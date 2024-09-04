@@ -91,12 +91,13 @@
     "quick_actions": false
   },
   // Formatting
-  "format_on_save": "off",
+  "format_on_save": "on",
   // Autoclose brackets and quotations when typing a single one
-  "use_autoclose": true,
+  "use_autoclose": false,
   // Language Overrides
   "languages": {
     "TypeScript": {
+      "format_on_save": "off",
       "show_inline_completions": true
     },
     "Lua": {
@@ -112,9 +113,17 @@
     "HTML": {
       "format_on_save": "off"
     },
+    "CSS": {
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "SCSS": {
+      "format_on_save": "on",
+      "tab_size": 2
+    },
     "Ruby": {
       "format_on_save": "on",
-      "show_inline_completions": false,
+      "show_inline_completions": true,
       "tab_size": 2
     },
     "JavaScript": {
