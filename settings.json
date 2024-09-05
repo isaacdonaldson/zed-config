@@ -96,6 +96,9 @@
   "use_autoclose": false,
   // Language Overrides
   "languages": {
+    "CSS": {
+      "show_inline_completions": true
+    },
     "TypeScript": {
       "format_on_save": "off",
       "show_inline_completions": true
