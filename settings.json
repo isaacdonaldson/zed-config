@@ -9,8 +9,8 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
     },
     "version": "2"
   },
@@ -27,7 +27,7 @@
     "show": "never"
   },
   // Whether or not AI suggestions are shown
-  "show_inline_completions": false,
+  "show_inline_completions": true,
   // Editor theme: Myricle is custom
   "theme": "Myricle",
   "indent_guides": {
@@ -62,7 +62,8 @@
   },
   // File Tree
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
+    "auto_fold_dirs": false
   },
   // Terminal
   "terminal": {
