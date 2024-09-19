@@ -79,6 +79,7 @@
       // Navigate to the buffer (tab) on the left or right
       "[ b": "pane::ActivatePrevItem",
       "] b": "pane::ActivateNextItem",
+      "space b p": "pane::TogglePinTab",
       // Rename variable
       "space c r": "editor::Rename",
       // Display diagnostic inline
