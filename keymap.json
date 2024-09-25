@@ -88,6 +88,8 @@
       "space m v": "markdown::OpenPreviewToTheSide",
       // Toggle bottom dock (terminal)
       "ctrl-\\": "workspace::ToggleBottomDock",
+      // Toggle inlay type hints
+      "space i h": "editor::ToggleInlayHints",
       // Copy relative path
       "space c p": "editor::CopyRelativePath"
     }
