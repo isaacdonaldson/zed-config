@@ -33,6 +33,17 @@
     "reveal": "always",
     "hide": "never",
     "shell": "system"
+  },
+  {
+    /*** THESE ARE EQUIVALENT COMMANDS ***/
+    // "command": "bash -c 'BRANCH=$(git symbolic-ref --short -q HEAD); BRANCH_COMMIT=$(git merge-base origin/master $BRANCH); git diff $BRANCH_COMMIT..$BRANCH'",
+    // "command": "bash -c 'BRANCH=$(git symbolic-ref --short -q HEAD); git diff origin/master..$BRANCH'",
+    "label": "Git PR diffs",
+    "command": "git diff master...",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
   }
-
 ]
