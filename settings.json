@@ -146,5 +146,9 @@
         "formatting": true
       }
     }
+  },
+  // Custom filetype associations
+  "file_types": {
+    "Ruby": ["*.cr"]
   }
 }
