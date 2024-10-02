@@ -112,11 +112,22 @@
       "ctrl-\\": "workspace::ToggleBottomDock"
     }
   },
+  // Terminal panel
   {
     "context": "Terminal",
     "bindings": {
       "cmd-t": "workspace::NewTerminal",
       "ctrl-\\": "workspace::ToggleBottomDock"
+    }
+  },
+  // Assistant panel
+  {
+    "context": "AssistantPanel",
+    "bindings": {
+      // Allow selected or single lines to be moved as a group up and down
+      "ctrl-<": "assistant::InsertIntoEditor",
+      "ctrl-,": "assistant::InsertIntoEditor",
+      "ctrl-c": "assistant::CopyCode"
     }
   }
 ]
