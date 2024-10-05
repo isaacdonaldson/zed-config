@@ -9,10 +9,7 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-
-      // Open task spawning popup
-      "space s t": "task::Spawn"
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
     }
   },
   {
@@ -94,7 +91,9 @@
       // Toggle inlay type hints
       "space i h": "editor::ToggleInlayHints",
       // Copy relative path
-      "space c p": "editor::CopyRelativePath"
+      "space c p": "editor::CopyRelativePath",
+      // Open task spawning popup
+      "space s t": "task::Spawn"
     }
   },
   // File panel (netrw)
