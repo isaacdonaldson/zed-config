@@ -3,6 +3,8 @@
     "label": "Cargo watch",
     "command": "cargo watch -q -c -x \"run -q\"",
     //"args": [],
+    "tags": ["cargo", "watch", "rust", "dev"],
+
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     // What to do with the terminal pane and tab, after the command was started:
@@ -16,6 +18,8 @@
     "label": "Sync down Zed settings",
     "command": "cd ~/.config/zed && git pull",
     //"args": [],
+    "tags": ["sync", "settings"],
+
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     // What to do with the terminal pane and tab, after the command was started:
@@ -28,6 +32,8 @@
   {
     "label": "Git history of repo (optional commit start, restores to current branch & commit)",
     "command": "bash -c 'BRANCH=$(git symbolic-ref --short -q HEAD); COMMIT=$(git rev-parse HEAD); START=${BRANCH:-${COMMIT:-\"main\"}}; echo \"Commit Hash\"; read HASH; [[ $HASH ]] && HASH=^$HASH^; for commit in $(git rev-list $START $HASH --reverse); do git checkout $commit; read; done; git checkout $START'",
+    "tags": ["history", "changes", "git", "repo"],
+
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "always",
@@ -40,6 +46,8 @@
     // "command": "bash -c 'BRANCH=$(git symbolic-ref --short -q HEAD); git diff origin/master..$BRANCH'",
     "label": "Git PR diffs",
     "command": "git diff master...",
+    "tags": ["diff", "pr", "changes", "git"],
+
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "always",
