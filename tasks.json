@@ -15,6 +15,21 @@
     "shell": "system"
   },
   {
+    "label": "Cargo bacon run",
+    "command": "bacon run",
+    //"args": [],
+    "tags": ["cargo", "watch", "rust", "dev", "bacon"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    // What to do with the terminal pane and tab, after the command was started:
+    // * `always` — always show the terminal pane, add and focus the corresponding task's tab in it (default)
+    // * `never` — avoid changing current terminal pane focus, but still add/reuse the task's tab there
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
     "label": "Sync down Zed settings",
     "command": "cd ~/.config/zed && git pull",
     //"args": [],
