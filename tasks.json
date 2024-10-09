@@ -58,6 +58,23 @@
     "label": "Terminal Snow",
     "command": "bash -c 'while sleep 0.1; do printf \"%-$(( ( RANDOM % `tput cols` ) - 1))s*\n\" ; done'",
     //"args": [],
+    "tags": ["snow"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    // What to do with the terminal pane and tab, after the command was started:
+    // * `always` — always show the terminal pane, add and focus the corresponding task's tab in it (default)
+    // * `never` — avoid changing current terminal pane focus, but still add/reuse the task's tab there
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Ruby test $ZED_RELATIVE_FILE:$ZED_ROW",
+    "command": "POSTGRES_USER=postgres bundle exec rspec",
+    "args": ["\"$ZED_RELATIVE_FILE:$ZED_ROW\""],
+    "tags": ["ruby-test"],
+
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     // What to do with the terminal pane and tab, after the command was started:
