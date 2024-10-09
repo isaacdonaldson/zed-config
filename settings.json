@@ -147,6 +147,67 @@
         "diagnostics": true,
         "formatting": true
       }
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "inlayHints": {
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        },
+
+        // get more cargo-less diagnostics from rust-analyzer,
+        // which might include false-positives (those can be turned off by their names)
+        "diagnostics": {
+          "experimental": {
+            "enable": true
+          }
+        },
+        // To disable the checking entirely
+        // (ignores all cargo and check settings below)
+        "checkOnSave": false,
+        // To check the `lib` target only.
+        "cargo": {
+          "allTargets": false
+        },
+        // Use `-p` instead of `--workspace` for cargo check
+        "check": {
+          "workspace": false
+        },
+        // Snippets
+        "completion": {
+          "snippets": {
+            "custom": {
+              "Arc::new": {
+                "postfix": "arc",
+                "body": ["Arc::new(${receiver})"],
+                "requires": "std::sync::Arc",
+                "scope": "expr"
+              },
+              "Some": {
+                "postfix": "some",
+                "body": ["Some(${receiver})"],
+                "scope": "expr"
+              },
+              "Ok": {
+                "postfix": "ok",
+                "body": ["Ok(${receiver})"],
+                "scope": "expr"
+              },
+              "vec!": {
+                "postfix": "vec",
+                "body": ["vec![${receiver}]"],
+                "description": "vec![]",
+                "scope": "expr"
+              }
+            }
+          }
+        }
+      }
     }
   },
   // Custom filetype associations
