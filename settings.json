@@ -132,7 +132,8 @@
     "Ruby": {
       "format_on_save": "on",
       "show_inline_completions": true,
-      "tab_size": 2
+      "tab_size": 2,
+      "language_servers": ["solargraph", "!rubocop", "!ruby-lsp"]
     },
     "JavaScript": {
       "format_on_save": "off",
@@ -143,6 +144,7 @@
   "lsp": {
     "solargraph": {
       "initialization_options": {
+        "diagnostics": true,
         "formatting": true
       }
     }
