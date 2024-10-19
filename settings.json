@@ -169,14 +169,14 @@
         },
         // To disable the checking entirely
         // (ignores all cargo and check settings below)
-        "checkOnSave": false,
+        "checkOnSave": true,
         // To check the `lib` target only.
         "cargo": {
           "allTargets": false
         },
         // Use `-p` instead of `--workspace` for cargo check
         "check": {
-          "workspace": false
+          "workspace": true
         },
         // Snippets
         "completion": {
