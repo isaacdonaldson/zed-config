@@ -24,6 +24,9 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     // Put key-bindings here if you want them to work in normal & visual mode
     "bindings": {
+      // Turn off regex when searching with /
+      // "/": ["vim::Search", { "regex": false }],
+
       // Allow j and k to navigate over wrapped lines
       "j": ["vim::Down", { "displayLines": true }],
       "k": ["vim::Up", { "displayLines": true }],
