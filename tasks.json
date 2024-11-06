@@ -118,6 +118,72 @@
     "shell": "system"
   },
   {
+    "label": "Resource usage (macOS)",
+    "command": "sudo powermetrics",
+    "tags": ["power", "usage", "battery"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Format JSON (macOS)",
+    "command": "pbpaste | jq | pbcopy",
+    "tags": ["format", "json", "JSON"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Clip",
+    "command": "if [[ \"$(uname)\" == \"Darwin\" ]]; then [ -t 0 ] && pbpaste || pbcopy else # assume linux if not macos [ -t 0 ] && xclip -o -selection clipboard || xclip -selection clipboard fi",
+    "tags": ["clipboard", "copy"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Generate UUID (macOS)",
+    "command": "uuidgen | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste",
+    "tags": ["clipboard", "copy", "uuid", "generate"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Current UTC time (macOS)",
+    "command": "TZ=UTC date '+%Y-%m-%d %H:%M:%S %Z' && date",
+    "tags": ["utc", "time", "current", "date"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Battery Info (macOS)",
+    "command": "echo && system_profiler SPPowerDataType | grep Wattage | cut -c 7- && echo && pmset -g batt",
+    "tags": ["power", "usage", "battery"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
     "label": "Keep awake (macOS)",
     "command": "caffeinate -d",
     "tags": ["keep", "open", "awake"],
