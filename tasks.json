@@ -184,6 +184,17 @@
     "shell": "system"
   },
   {
+    "label": "Look busy",
+    "command": "cat /dev/random | hexdump -C | grep '0 ca fe'",
+    "tags": ["look", "busy", "matrix"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
     "label": "Keep awake (macOS)",
     "command": "caffeinate -d",
     "tags": ["keep", "open", "awake"],
