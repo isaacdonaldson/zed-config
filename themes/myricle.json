@@ -58,7 +58,7 @@
         "border": "#474448",
         "border.disabled": "#2d2a2e",
         "border.focused": "#727072",
-        "border.selected": "#2d2a2e",
+        "border.selected": "#ffd866",
         "border.transparent": "#2d2a2e",
         "border.variant": "#474448",
         "drop_target.background": "#5b595cbf",
