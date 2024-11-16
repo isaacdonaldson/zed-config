@@ -28,7 +28,7 @@
   },
   // Behaviours of the active panel
   "active_pane_modifiers": {
-    "inactive_opacity": 0.65,
+    "inactive_opacity": 0.75,
     "border_size": 1
   },
   // Whether or not AI suggestions are shown
