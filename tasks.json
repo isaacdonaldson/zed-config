@@ -74,7 +74,7 @@
   },
   {
     "label": "Git rebase to master",
-    "command": "echo 'git checkout master' && echo 'git pull' && echo 'git checkout <your_branch>' && echo 'git rebase origin/master'",
+    "command": "echo 'git checkout master' && echo 'git pull' && echo 'git checkout <your_branch>' && echo 'git rebase origin/master' && echo 'git push -f origin <your_branch>'",
     "tags": ["git", "rebase"],
 
     "use_new_terminal": true,
