@@ -14,6 +14,9 @@
     },
     "version": "2"
   },
+  "file_finder": {
+    "modal_max_width": "large"
+  },
   // Show first window draw time and FPS
   "performance": {
     "show_in_status_bar": false
