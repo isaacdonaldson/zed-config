@@ -113,7 +113,7 @@
         "scrollbar.track.border": "#2d2a2e",
         "search.match_background": "#5b595c",
         "status_bar.background": "#221f22",
-        "surface.background": "#403e41",
+        "surface.background": "#221f22",
         "tab.active_background": "#2d2a2e",
         "tab.active_border": "#ffd866",
         "tab.inactive_background": "#221f22",
