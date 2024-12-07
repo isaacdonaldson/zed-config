@@ -111,6 +111,15 @@
       "space s S": "project_symbols::Toggle"
     }
   },
+  // Insert Mode
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      // Code actions
+      "ctrl-c ctrl-a": "editor::ToggleCodeActions",
+      "ctrl-c ctrl-c": "editor::ShowInlineCompletion"
+    }
+  },
   // File panel (netrw)
   {
     "context": "ProjectPanel && not_editing",
