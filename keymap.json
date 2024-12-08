@@ -108,7 +108,10 @@
 
       // Symbol searching
       "space s s": "outline::Toggle",
-      "space s S": "project_symbols::Toggle"
+      "space s S": "project_symbols::Toggle",
+
+      // Open assistant
+      "cmd r": "assistant::ToggleFocus"
     }
   },
   // Insert Mode
@@ -117,7 +120,10 @@
     "bindings": {
       // Code actions
       "ctrl-c ctrl-a": "editor::ToggleCodeActions",
-      "ctrl-c ctrl-c": "editor::ShowInlineCompletion"
+      "ctrl-c ctrl-c": "editor::ShowInlineCompletion",
+
+      // Open assistant
+      "cmd r": "assistant::ToggleFocus"
     }
   },
   // File panel (netrw)
@@ -135,7 +141,9 @@
       "q": "workspace::ToggleLeftDock",
       "space e": "workspace::ToggleLeftDock",
       // Toggle bottom dock (terminal)
-      "ctrl-\\": "workspace::ToggleBottomDock"
+      "ctrl-\\": "workspace::ToggleBottomDock",
+      // Open assistant
+      "cmd r": "assistant::ToggleFocus"
     }
   },
   // Terminal panel
