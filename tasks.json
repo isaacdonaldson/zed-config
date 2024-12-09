@@ -95,6 +95,17 @@
     "shell": "system"
   },
   {
+    "label": "Terminal Look Busy",
+    "command": "cat /dev/random | hexdump -C | grep '0 ca fe'",
+    "tags": ["busy", "look", "matrix"],
+
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
     "label": "Ruby test $ZED_RELATIVE_FILE:$ZED_ROW",
     "command": "POSTGRES_USER=postgres bundle exec rspec",
     "args": ["\"$ZED_RELATIVE_FILE:$ZED_ROW\""],
