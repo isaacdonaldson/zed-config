@@ -146,6 +146,9 @@
     "JavaScript": {
       "format_on_save": "off",
       "show_inline_completions": true
+    },
+    "Markdown": {
+      "show_inline_completions": false
     }
   },
   // LSP
