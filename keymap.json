@@ -65,6 +65,8 @@
       "space g h": "editor::ToggleHunkDiff",
       // Revert git hunk
       "space g r h": "editor::RevertSelectedHunks",
+      // Open Gitu (git magit viewer)
+      "space g n t": ["task::Spawn", { "task_name": "gitu" }],
 
       // Go to next git hunk
       "[ h": "editor::GoToHunk",
