@@ -9,7 +9,13 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      // Resize windows
+      "ctrl-shift-h": ["vim::ResizePane", "Narrow"],
+      "ctrl-shift-l": ["vim::ResizePane", "Widen"],
+      "ctrl-shift-j": ["vim::ResizePane", "Shorten"],
+      "ctrl-shift-k": ["vim::ResizePane", "Lengthen"]
     }
   },
   {
