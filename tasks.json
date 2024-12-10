@@ -4,7 +4,7 @@
   //======================
   {
     "label": "Cargo bacon run",
-    "command": "bacon run",
+    "command": "bash -c 'if command -v bacon >/dev/null 2>&1; then\n\tbacon run\nelse\n\techo \"install bacon with:\n\n\tcargo install bacon --locked\"\nfi'",
     //"args": [],
     "tags": ["cargo", "watch", "rust", "dev", "bacon"],
     "use_new_terminal": true,
@@ -20,7 +20,7 @@
   },
   {
     "label": "gitu",
-    "command": "gitu",
+    "command": "bash -c 'if command -v gitu >/dev/null 2>&1; then\n\tgitu\nelse\n\techo \"install gitu with:\n\n\tcargo install gitu --locked\"\nfi'",
     //"args": [],
     "tags": ["git", "viewer", "magit"],
     "use_new_terminal": true,
