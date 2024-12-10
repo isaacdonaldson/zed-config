@@ -1,21 +1,12 @@
 [
-  {
-    "label": "Cargo watch",
-    "command": "cargo watch -q -c -x \"run -q\"",
-    "tags": ["cargo", "watch", "rust", "dev"],
-
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-    "reveal": "no_focus",
-    "hide": "never",
-    "shell": "system"
-  },
+  //======================
+  // Common tasks
+  //======================
   {
     "label": "Cargo bacon run",
     "command": "bacon run",
     //"args": [],
     "tags": ["cargo", "watch", "rust", "dev", "bacon"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     // What to do with the terminal pane and tab, after the command was started:
@@ -23,24 +14,34 @@
     // * `never` — avoid changing current terminal pane focus, but still add/reuse the task's tab there
     "reveal": "no_focus",
     "hide": "never",
-    "shell": "system"
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
   },
   {
-    "label": "Sync down Zed settings",
-    "command": "cd ~/.config/zed && git pull",
-    "tags": ["sync", "settings"],
-
+    "label": "gitu",
+    "command": "gitu",
+    //"args": [],
+    "tags": ["git", "viewer", "magit"],
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
-    "reveal": "no_focus",
-    "hide": "never",
-    "shell": "system"
+    // What to do with the terminal pane and tab, after the command was started:
+    // * `always` — always show the terminal pane, add and focus the corresponding task's tab in it (default)
+    // * `never` — avoid changing current terminal pane focus, but still add/reuse the task's tab there
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
   },
+
+  //======================
+  // Git tasks
+  //======================
   {
     "label": "Git history of repo (optional commit start, restores to current branch & commit)",
     "command": "bash -c 'BRANCH=$(git symbolic-ref --short -q HEAD); COMMIT=$(git rev-parse HEAD); START=${BRANCH:-${COMMIT:-\"main\"}}; echo \"Commit Hash\"; read HASH; [[ $HASH ]] && HASH=^$HASH^; for commit in $(git rev-list $START $HASH --reverse); do git checkout $commit; read; done; git checkout $START'",
     "tags": ["history", "changes", "git", "repo"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "always",
@@ -54,7 +55,6 @@
     "label": "Git PR diffs",
     "command": "git diff master...",
     "tags": ["diff", "pr", "changes", "git"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "always",
@@ -65,7 +65,6 @@
     "label": "Git undo last commit",
     "command": "git reset HEAD~",
     "tags": ["undo", "commit", "git", "repo"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "no_focus",
@@ -76,63 +75,107 @@
     "label": "Git rebase to master",
     "command": "echo 'git checkout master' && echo 'git pull' && echo 'git checkout <your_branch>' && echo 'git rebase origin/master' && echo 'git push -f origin <your_branch>'",
     "tags": ["git", "rebase"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "no_focus",
     "hide": "never",
     "shell": "system"
   },
+
+  //======================
+  // Display tasks
+  //======================
   {
     "label": "Terminal Snow",
     "command": "bash -c 'while sleep 0.1; do printf \"%-$(( ( RANDOM % `tput cols` ) - 1))s*\n\" ; done'",
     "tags": ["snow"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "no_focus",
     "hide": "never",
-    "shell": "system"
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
   },
   {
     "label": "Terminal Look Busy",
     "command": "cat /dev/random | hexdump -C | grep '0 ca fe'",
     "tags": ["busy", "look", "matrix"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "no_focus",
     "hide": "never",
-    "shell": "system"
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
   },
+
+  //======================
+  // Ruby tasks
+  //======================
   {
     "label": "Ruby test $ZED_RELATIVE_FILE:$ZED_ROW",
     "command": "POSTGRES_USER=postgres bundle exec rspec",
     "args": ["\"$ZED_RELATIVE_FILE:$ZED_ROW\""],
     "tags": ["ruby-test"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "always",
-    "hide": "never",
+    "hide": "on_success",
     "shell": "system"
   },
   {
     "label": "Rubocop Lint Check",
     "command": "bundle exec rubocop -c .rubocop.yml",
     "tags": ["rubocop", "lint", "check"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "always",
-    "hide": "never",
+    "hide": "on_success",
     "shell": "system"
   },
+
+  //======================
+  // Mac tasks
+  //======================
   {
     "label": "Resource usage (macOS)",
     "command": "sudo powermetrics",
     "tags": ["power", "usage", "battery"],
-
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Generate UUID (macOS)",
+    "command": "uuidgen | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste",
+    "tags": ["clipboard", "copy", "uuid", "generate"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
+  },
+  {
+    "label": "Current UTC time (macOS)",
+    "command": "TZ=UTC date '+%Y-%m-%d %H:%M:%S %Z' && date",
+    "tags": ["utc", "time", "current", "date"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
+  },
+  {
+    "label": "Battery Info (macOS)",
+    "command": "echo && system_profiler SPPowerDataType | grep Wattage | cut -c 7- && echo && pmset -g batt",
+    "tags": ["power", "usage", "battery"],
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "no_focus",
@@ -143,73 +186,42 @@
     "label": "Format JSON (macOS)",
     "command": "pbpaste | jq | pbcopy",
     "tags": ["format", "json", "JSON"],
-
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "always",
     "hide": "never",
-    "shell": "system"
-  },
-  {
-    "label": "Clip",
-    "command": "if [[ \"$(uname)\" == \"Darwin\" ]]; then [ -t 0 ] && pbpaste || pbcopy else # assume linux if not macos [ -t 0 ] && xclip -o -selection clipboard || xclip -selection clipboard fi",
-    "tags": ["clipboard", "copy"],
-
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-    "reveal": "always",
-    "hide": "never",
-    "shell": "system"
-  },
-  {
-    "label": "Generate UUID (macOS)",
-    "command": "uuidgen | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste",
-    "tags": ["clipboard", "copy", "uuid", "generate"],
-
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-    "reveal": "always",
-    "hide": "never",
-    "shell": "system"
-  },
-  {
-    "label": "Current UTC time (macOS)",
-    "command": "TZ=UTC date '+%Y-%m-%d %H:%M:%S %Z' && date",
-    "tags": ["utc", "time", "current", "date"],
-
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-    "reveal": "no_focus",
-    "hide": "never",
-    "shell": "system"
-  },
-  {
-    "label": "Battery Info (macOS)",
-    "command": "echo && system_profiler SPPowerDataType | grep Wattage | cut -c 7- && echo && pmset -g batt",
-    "tags": ["power", "usage", "battery"],
-
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-    "reveal": "no_focus",
-    "hide": "never",
-    "shell": "system"
-  },
-  {
-    "label": "Look busy",
-    "command": "cat /dev/random | hexdump -C | grep '0 ca fe'",
-    "tags": ["look", "busy", "matrix"],
-
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-    "reveal": "no_focus",
-    "hide": "never",
-    "shell": "system"
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
   },
   {
     "label": "Keep awake (macOS)",
     "command": "caffeinate -d",
     "tags": ["keep", "open", "awake"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system"
+  },
 
+  //======================
+  // Misc tasks
+  //======================
+  {
+    "label": "Cargo watch",
+    "command": "cargo watch -q -c -x \"run -q\"",
+    "tags": ["cargo", "watch", "rust", "dev"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Sync down Zed settings",
+    "command": "cd ~/.config/zed && git pull",
+    "tags": ["sync", "settings"],
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "reveal": "no_focus",
