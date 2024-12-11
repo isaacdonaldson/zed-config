@@ -130,6 +130,7 @@
     "bindings": {
       // Code actions
       "ctrl-c ctrl-a": "editor::ToggleCodeActions",
+      "ctrl-c ctrl-o": "editor::ShowCompletions",
       "ctrl-c ctrl-c": "editor::ShowInlineCompletion",
 
       // Open assistant
