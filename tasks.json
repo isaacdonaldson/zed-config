@@ -20,7 +20,7 @@
   },
   {
     "label": "gitu",
-    "command": "bash -c 'if command -v gitu >/dev/null 2>&1; then\n\tgitu\nelse\n\techo \"install gitu with:\n\n\tcargo install gitu --locked\"\nfi'",
+    "command": "bash -c 'if command -v gitu >/dev/null 2>&1; then\n\tGIT_EDITOR=nvim gitu\nelse\n\techo \"install gitu with:\n\n\tcargo install gitu --locked\"\nfi'",
     //"args": [],
     "tags": ["git", "viewer", "magit"],
     "use_new_terminal": true,
