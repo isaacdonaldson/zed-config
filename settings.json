@@ -34,6 +34,12 @@
     "button": false,
     "dock": "left"
   },
+  // Gutter where line numbers and git status is
+  "gutter": {
+    "code_actions": false,
+    "line_numbers": true,
+    "folds": false
+  },
   // File finder modal
   "file_finder": {
     "modal_max_width": "large"
@@ -59,6 +65,7 @@
   "show_inline_completions": true,
   // Editor theme: Myricle is custom
   "theme": "Myricle",
+  // Show indent guides
   "indent_guides": {
     "enabled": true,
     "line_width": 2,
