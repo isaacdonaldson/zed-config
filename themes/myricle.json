@@ -1,5 +1,5 @@
 {
-  "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
   "name": "Myricle",
   "author": "Isaac Donaldson",
   "themes": [
@@ -55,7 +55,7 @@
         ],
         "background": "#2d2a2e",
         "background.appearance": "opaque",
-        "border": "#474448",
+        "border": "#19181a",
         "border.disabled": "#2d2a2e",
         "border.focused": "#727072",
         "border.selected": "#ffd866",
@@ -71,7 +71,7 @@
         "editor.line_number": "#5b595c",
         "editor.subheader.background": "#333034",
         "editor.wrap_guide": "#5b595c",
-        "editor_selection": "#ffccff",
+        "editor.selection": "#c1c0c026",
         "editor.document_highlight.read_background": "#5b595caf",
         "editor.document_highlight.write_background": "#5b595caf",
         "element.background": "#403e41",
@@ -104,7 +104,7 @@
         "pane_group.border": "#ffd866",
         "pane.focused_border": "#ffd866",
         "panel.focused_border": "#ffd866",
-        "panel.background": "#221f22",
+        "panel.background": "#403e41",
         "predictive": "#939293",
         "scrollbar.thumb.background": "#c1c0c026",
         "scrollbar.thumb.border": "#c1c0c026",
@@ -121,6 +121,39 @@
         "title_bar.background": "#221f22",
         "title_bar.inactive_background": "#333034",
         "toolbar.background": "#2d2a2e",
+        "tooltip.background": "#403e41",
+        "tooltip.border": "#221f22",
+        "focus_ring": "#727072",
+        "icon.background": "#403e41",
+        "icon.border": "#403e41",
+        "icon.foreground": "#fcfcfc",
+        "icon.placeholder": "#727072",
+        "window.background": "#2d2a2e",
+        "link_text": "#ffd866",
+        "popover.background": "#403e41",
+        "context_menu.background": "#403e41",
+        "context_menu.border": "#221f22",
+        "progress_bar.background": "#727072",
+        "progress_bar.fill": "#939293",
+        "picker.background": "#403e41",
+        "picker.border": "#221f22",
+        "buffer.background": "#2d2a2e",
+        "buffer.background.hover": "#fcfcfa0c",
+        "buffer.background.selected": "#fcfcfa26",
+        "buffer.foreground": "#fcfcfa",
+        "buffer.foreground.hover": "#fcfcfa",
+        "buffer.foreground.selected": "#ffd866",
+        "sidebar.border": "#19181a",
+        "checkbox.background": "#403e41",
+        "checkbox.foreground": "#fcfcfa",
+        "divider": "#403e41",
+        "editor.fold.background": "#fcfcfa0c",
+        "editor.snippet.focused_placeholder_background": "#fcfcfa26",
+        "editor.snippet.placeholder_background": "#fcfcfa1a",
+        "editor.virtual.inlay_hint_background": "#403e41",
+        "editor.virtual.inlay_hint_foreground": "#939293",
+        "overlay.background": "#2d2a2ebf",
+        "status_bar.border": "#19181a",
         "icon": "#ffd866",
         "syntax": {
           "background_color": {
@@ -212,7 +245,7 @@
             "color": "#ffd866"
           },
           "string.escape": {
-            "color": "#fcfcfa"
+            "color": "#ab9df2"
           },
           "string.regex": {
             "color": "#ffd866"
@@ -233,7 +266,16 @@
             "color": "#ffd866"
           },
           "type": {
-            "color": "#78dce8"
+            "color": "#78dce8",
+            "font_style": "italic"
+          },
+          "type.builtin": {
+            "color": "#78dce8",
+            "font_style": "italic"
+          },
+          "type.parameter": {
+            "color": "#fc9876",
+            "font_style": "italic"
           },
           "type.interface": {
             "color": "#78dce8"
@@ -247,8 +289,12 @@
           "variable.member": {
             "color": "#fcfcfa"
           },
+          "variable.builtin": {
+            "color": "#c1c0c0"
+          },
           "variable.parameter": {
-            "color": "#fc9876"
+            "color": "#fc9876",
+            "font_style": "italic"
           },
           "variable.special": {
             "color": "#c1c0c0",
@@ -274,6 +320,7 @@
         "terminal.ansi.red": "#ff6188",
         "terminal.ansi.white": "#fcfcfa",
         "terminal.ansi.yellow": "#ffd866",
+        "terminal.foreground": "#fcfcfa",
         "terminal.background": "#403e41"
       }
     }
