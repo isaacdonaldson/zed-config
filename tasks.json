@@ -184,7 +184,7 @@
   },
   {
     "label": "Format JSON (macOS)",
-    "command": "pbpaste | jq | pbcopy",
+    "command": "bash -c 'pbpaste | jq | pbcopy && pbpaste'",
     "tags": ["format", "json", "JSON"],
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
