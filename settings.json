@@ -56,11 +56,11 @@
     "metrics": false
   },
   // Fonts
-  "ui_font_size": 14,
+  "ui_font_size": 12,
   "ui_font_family": "Berkeley Mono Variable",
   "buffer_font_family": "Berkeley Mono Variable",
   "buffer_font_fallbacks": ["Berkeley Mono", "JetBrains Mono NL"],
-  "buffer_font_size": 14,
+  "buffer_font_size": 12,
   "buffer_font_features": {
     "calt": false,
     "liga": false,
@@ -69,7 +69,7 @@
     "zero": true
   },
   "buffer_line_height": {
-    "custom": 1.3
+    "custom": 1.5
   },
   // File Tree
   "project_panel": {
@@ -80,7 +80,7 @@
   "terminal": {
     "dock": "bottom",
     "font_family": "Berkeley Mono Variable",
-    "font_size": 14,
+    "font_size": 12,
     "line_height": "standard",
     "option_as_meta": true,
     "working_directory": "current_project_directory",
