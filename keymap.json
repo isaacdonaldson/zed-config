@@ -170,7 +170,8 @@
       "ctrl-<": "assistant::InsertIntoEditor",
       "ctrl-,": "assistant::InsertIntoEditor",
       "ctrl-c": "assistant::CopyCode",
-      "ctrl-enter": "assistant::Assist"
+      "ctrl-enter": "assistant::Assist",
+      "cmd-t": "assistant::NewContext"
     }
   },
   {
