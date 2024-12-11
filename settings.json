@@ -7,13 +7,34 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  // Assistant panel (AI)
   "assistant": {
+    "dock": "right",
     "default_model": {
       "provider": "anthropic",
       "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
+  // Chat panel
+  "chat_panel": {
+    // Hide the chat panel
+    "button": false,
+    "dock": "left"
+  },
+  // Collaboration panel
+  "collaboration_panel": {
+    // Hide the collaboration panel
+    "button": false,
+    "dock": "left"
+  },
+  // Notification panel
+  "notification_panel": {
+    // Hide the collaboration panel
+    "button": false,
+    "dock": "left"
+  },
+  // File finder modal
   "file_finder": {
     "modal_max_width": "large"
   },
