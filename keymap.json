@@ -163,7 +163,18 @@
   {
     "context": "Terminal",
     "bindings": {
+      // New terminal tab
       "cmd-t": "workspace::NewTerminal",
+
+      // Terminal splitting
+      "ctrl-s d": "pane::SplitDown",
+      "ctrl-s l": "pane::SplitLeft",
+      "ctrl-s r": "pane::SplitRight",
+      "ctrl-s u": "pane::SplitUp",
+      "ctrl-|": "pane::SplitRight", // To the right
+      "ctrl-\\": "pane::SplitDown", // To the left
+
+      // Toggling the terminal
       "ctrl-\\": "workspace::ToggleBottomDock"
     }
   },
