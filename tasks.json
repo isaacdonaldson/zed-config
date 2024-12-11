@@ -19,8 +19,8 @@
     "show_command": false
   },
   {
-    "label": "gitu",
-    "command": "bash -c 'if command -v gitu >/dev/null 2>&1; then\n\tGIT_EDITOR=nvim gitu\nelse\n\techo \"install gitu with:\n\n\tcargo install gitu --locked\"\nfi'",
+    "label": "Neogit",
+    "command": "nvim -c \"Neogit\"",
     //"args": [],
     "tags": ["git", "viewer", "magit"],
     "use_new_terminal": true,
@@ -208,6 +208,22 @@
   //======================
   // Misc tasks
   //======================
+  {
+    "label": "gitu",
+    "command": "bash -c 'if command -v gitu >/dev/null 2>&1; then\n\tGIT_EDITOR=nvim gitu\nelse\n\techo \"install gitu with:\n\n\tcargo install gitu --locked\"\nfi'",
+    //"args": [],
+    "tags": ["gitu"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    // What to do with the terminal pane and tab, after the command was started:
+    // * `always` — always show the terminal pane, add and focus the corresponding task's tab in it (default)
+    // * `never` — avoid changing current terminal pane focus, but still add/reuse the task's tab there
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system",
+    "show_summary": false,
+    "show_command": false
+  },
   {
     "label": "Cargo watch",
     "command": "cargo watch -q -c -x \"run -q\"",
