@@ -111,7 +111,7 @@
   "terminal": {
     "dock": "bottom",
     "font_family": "Berkeley Mono Variable",
-    "font_size": 13,
+    "font_size": 14,
     "line_height": "standard",
     "option_as_meta": true,
     "working_directory": "current_project_directory",
