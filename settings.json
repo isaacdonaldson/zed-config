@@ -92,7 +92,6 @@
   "buffer_font_family": "Berkeley Mono Variable",
   "buffer_font_fallbacks": ["Berkeley Mono", "JetBrains Mono NL"],
   "buffer_font_size": 13,
-  "buffer_font_weight": 100,
   "buffer_font_features": {
     "calt": false,
     "liga": false,
