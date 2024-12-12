@@ -21,11 +21,11 @@
   {
     "context": "Editor",
     "bindings": {
+      // Don't put space bindings in here as it causes input pausing problems
+
       // Allow selected or single lines to be moved as a group up and down
       "alt-k": "editor::MoveLineUp",
-      "alt-j": "editor::MoveLineDown",
-      // Open Neogit (git magit viewer)
-      "space g n t": ["task::Spawn", { "task_name": "Neogit" }]
+      "alt-j": "editor::MoveLineDown"
     }
   },
   {
