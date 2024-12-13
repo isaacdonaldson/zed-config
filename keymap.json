@@ -71,8 +71,8 @@
       "space g n t": ["task::Spawn", { "task_name": "Neogit" }],
 
       // Go to next git hunk
-      "[ h": "editor::GoToHunk",
-      "] h": "editor::GoToPrevHunk",
+      "] h": "editor::GoToHunk",
+      "[ h": "editor::GoToPrevHunk",
       // Find file
       "space f f": "file_finder::Toggle",
       // Find words
@@ -100,6 +100,10 @@
       "space c r": "editor::Rename",
       // Display diagnostic inline
       "space c d": "editor::Hover",
+      // Code actions dropdown
+      "space c a": "editor::ToggleCodeActions",
+      // Completions dropdown
+      "space c o": "editor::ShowCompletions",
       // Open markdown previewer
       "space m v": "markdown::OpenPreviewToTheSide",
       // Toggle bottom dock (terminal)
@@ -111,8 +115,8 @@
       // Open task spawning popup
       "space s t": "task::Spawn",
       // Navigate to the next/prev diagnostic
-      "[ d": "editor::GoToDiagnostic",
-      "] d": "editor::GoToPrevDiagnostic",
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPrevDiagnostic",
       // Bring up the diagnostic page
       "space x x": "diagnostics::Deploy",
 
