@@ -109,6 +109,7 @@
     "dock": "left",
     "indent_size": 15,
     "auto_reveal_entries": true,
+    "show_diagnostics": "all",
     "auto_fold_dirs": false
   },
   // Terminal
@@ -140,7 +141,7 @@
   "tabs": {
     "git_status": true,
     "always_show_close_button": true,
-    "activate_on_close": "neighbour",
+    "activate_on_close": "left_neighbour",
     "close_position": "right",
     "file_icons": true
   },
