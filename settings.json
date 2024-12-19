@@ -36,6 +36,8 @@
     "button": false,
     "dock": "left"
   },
+  // Make the line numbers relative to the cursor
+  "relative_line_numbers": true,
   // Gutter where line numbers and git status is
   "gutter": {
     "code_actions": false,
