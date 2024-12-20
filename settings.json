@@ -110,7 +110,7 @@
   "project_panel": {
     "dock": "left",
     "indent_size": 15,
-    "auto_reveal_entries": true,
+    "auto_reveal_entries": false,
     "show_diagnostics": "all",
     "auto_fold_dirs": false
   },
