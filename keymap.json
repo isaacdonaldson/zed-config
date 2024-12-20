@@ -81,6 +81,8 @@
       "space u f": "editor::Format",
       // Toggle left dock (file-tree)
       "space e": "workspace::ToggleLeftDock",
+      // Open file in file-tree
+      "space o e": "pane::RevealInProjectPanel",
       // Toggle comments
       "space /": "editor::ToggleComments",
       // Navigating through matches
