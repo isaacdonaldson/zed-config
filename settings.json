@@ -91,10 +91,11 @@
   },
   // Fonts
   "ui_font_size": 14,
-  "ui_font_family": "Berkeley Mono Variable",
-  "ui_font_weight": 100,
-  "buffer_font_family": "Berkeley Mono Variable",
-  "buffer_font_fallbacks": ["Berkeley Mono", "JetBrains Mono NL"],
+  "ui_font_family": "TX-02",
+  "ui_font_weight": 700,
+  "buffer_font_family": "TX-02",
+  "buffer_font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
+  "buffer_font_weight": 500,
   "buffer_font_size": 13,
   "buffer_font_features": {
     "calt": false,
@@ -112,6 +113,7 @@
     "indent_size": 15,
     "auto_reveal_entries": false,
     "show_diagnostics": "all",
+    "git_status": true,
     "auto_fold_dirs": false
   },
   // Terminal
@@ -198,6 +200,9 @@
     },
     "Markdown": {
       "show_inline_completions": false
+    },
+    "YAML": {
+      "format_on_save": "off"
     }
   },
   // LSP
