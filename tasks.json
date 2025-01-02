@@ -59,7 +59,8 @@
     "allow_concurrent_runs": false,
     "reveal": "always",
     "hide": "never",
-    "shell": "system"
+    "shell": "system",
+    "reveal_target": "center"
   },
   {
     /*** THESE ARE EQUIVALENT COMMANDS ***/
@@ -72,7 +73,8 @@
     "allow_concurrent_runs": false,
     "reveal": "always",
     "hide": "always",
-    "shell": "system"
+    "shell": "system",
+    "reveal_target": "center"
   },
   {
     "label": "Git undo last commit",
