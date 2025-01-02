@@ -32,7 +32,8 @@
     "hide": "on_success",
     "shell": "system",
     "show_summary": false,
-    "show_command": false
+    "show_command": false,
+    "reveal_target": "center"
   },
   {
     "label": "Pomgo",

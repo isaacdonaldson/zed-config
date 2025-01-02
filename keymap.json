@@ -168,7 +168,7 @@
       // Open assistant
       "cmd r": "assistant::ToggleFocus",
       // Open Neogit (git magit viewer)
-      "space g n t": ["task::Spawn", { "task_name": "Neogit" }]
+      "space g n t": ["task::Spawn", { "task_name": "Neogit", "target": "center" }]
     }
   },
   // Terminal panel
