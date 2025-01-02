@@ -11,11 +11,17 @@
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
       "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
 
+      // Move items to different panes
+      "ctrl-shift-h": ["workspace::MoveItemToPaneInDirection", "Left"],
+      "ctrl-shift-l": ["workspace::MoveItemToPaneInDirection", "Left"],
+      "ctrl-shift-k": ["workspace::MoveItemToPaneInDirection", "Left"],
+      "ctrl-shift-j": ["workspace::MoveItemToPaneInDirection", "Left"],
+
       // Resize windows
-      "ctrl-shift-h": ["vim::ResizePane", "Narrow"],
-      "ctrl-shift-l": ["vim::ResizePane", "Widen"],
-      "ctrl-shift-j": ["vim::ResizePane", "Shorten"],
-      "ctrl-shift-k": ["vim::ResizePane", "Lengthen"]
+      "ctrl-cmd-h": ["vim::ResizePane", "Narrow"],
+      "ctrl-cmd-l": ["vim::ResizePane", "Widen"],
+      "ctrl-cmd-j": ["vim::ResizePane", "Shorten"],
+      "ctrl-cmd-k": ["vim::ResizePane", "Lengthen"]
     }
   },
   {
