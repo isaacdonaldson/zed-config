@@ -21,7 +21,7 @@
   // Chat panel
   "chat_panel": {
     // Hide the chat panel
-    "button": false,
+    "button": "never",
     "dock": "left"
   },
   // Collaboration panel
@@ -47,7 +47,7 @@
   },
   // File finder modal
   "file_finder": {
-    "modal_max_width": "large"
+    "modal_max_width": "xlarge"
   },
   // Show first window draw time and FPS
   "performance": {
@@ -193,7 +193,7 @@
       "format_on_save": "on",
       "show_inline_completions": true,
       "tab_size": 2,
-      "language_servers": ["solargraph", "!rubocop", "!ruby-lsp"]
+      "language_servers": ["!solargraph", "!rubocop", "ruby-lsp"]
     },
     "JavaScript": {
       "format_on_save": "off",
@@ -212,6 +212,17 @@
       "initialization_options": {
         "diagnostics": true,
         "formatting": true
+      }
+    },
+    "ruby-lsp": {
+      "settings": {
+        "use_bundler": true
+      },
+      "initialization_options": {
+        "enabledFeatures": {
+          // This disables diagnostics
+          "diagnostics": false
+        }
       }
     },
     "rubocop": {
