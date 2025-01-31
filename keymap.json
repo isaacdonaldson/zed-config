@@ -12,10 +12,10 @@
       "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
 
       // Move items to different panes
-      "ctrl-shift-h": ["workspace::MoveItemToPaneInDirection", "Left"],
-      "ctrl-shift-l": ["workspace::MoveItemToPaneInDirection", "Left"],
-      "ctrl-shift-k": ["workspace::MoveItemToPaneInDirection", "Left"],
-      "ctrl-shift-j": ["workspace::MoveItemToPaneInDirection", "Left"],
+      "ctrl-shift-h": ["workspace::MoveItemToPaneInDirection", { "direction": "Left", "focus": true }],
+      "ctrl-shift-l": ["workspace::MoveItemToPaneInDirection", { "direction": "Right", "focus": true }],
+      "ctrl-shift-k": ["workspace::MoveItemToPaneInDirection", { "direction": "Up", "focus": true }],
+      "ctrl-shift-j": ["workspace::MoveItemToPaneInDirection", { "direction": "Down", "focus": true }],
 
       // Resize windows
       "ctrl-cmd-h": ["vim::ResizePane", "Narrow"],
@@ -46,10 +46,10 @@
       "k": ["vim::Up", { "displayLines": true }],
 
       // Disable arrow key navigation
-      "up": "zed::NoAction",
-      "down": "zed::NoAction",
-      "left": "zed::NoAction",
-      "right": "zed::NoAction",
+      "up": null,
+      "down": null,
+      "left": null,
+      "right": null,
 
       // LSP code actions
       "g d": "editor::GoToDefinition",
