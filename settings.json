@@ -112,7 +112,8 @@
   "project_panel": {
     "dock": "left",
     "indent_size": 15,
-    "auto_reveal_entries": false,
+    "entry_spacing": "comfortable",
+    "auto_reveal_entries": true,
     "show_diagnostics": "all",
     "git_status": true,
     "auto_fold_dirs": false

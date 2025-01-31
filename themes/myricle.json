@@ -44,15 +44,7 @@
             "selection": "#78dce81a"
           }
         ],
-        "accents": [
-          "#ab9df2",
-          "#ffccff",
-          "#78dce8",
-          "#a9dc76",
-          "#ffd866",
-          "#fc9867",
-          "#ff6188"
-        ],
+        "accents": ["#ab9df2", "#ffccff", "#78dce8", "#a9dc76", "#ffd866", "#fc9867", "#ff6188"],
         "background": "#2d2a2e",
         "background.appearance": "opaque",
         "border": "#474448",
@@ -75,7 +67,7 @@
         "editor.document_highlight.read_background": "#5b595caf",
         "editor.document_highlight.write_background": "#5b595caf",
         "element.background": "#403e41",
-        "element.selected": "#ffd866",
+        "element.selected": "#c1c0c026",
         "elevated_surface.background": "#221f22",
         "ghost_element.hover": "#fcfcfa0c",
         "ghost_element.selected": "#fcfcfa0c",
