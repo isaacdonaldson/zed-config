@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   // Hide profile picture in titlebar
+  "icon_theme": "Material Icon Theme",
   "show_user_picture": false,
   // Assistant panel (AI)
   "assistant": {
