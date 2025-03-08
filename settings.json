@@ -8,6 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   // Hide profile picture in titlebar
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "icon_theme": "Material Icon Theme",
   "show_user_picture": false,
   // Assistant panel (AI)
@@ -48,6 +51,7 @@
   },
   // File finder modal
   "file_finder": {
+    "file_icons": true,
     "modal_max_width": "xlarge"
   },
   // Show first window draw time and FPS
@@ -68,7 +72,7 @@
     "border_size": 1
   },
   // Whether or not AI suggestions are shown
-  "show_inline_completions": true,
+  "show_edit_predictions": true,
   // Editor theme: Myricle is custom
   "theme": "Myricle",
   // Show indent guides
@@ -93,10 +97,18 @@
   // Fonts
   "ui_font_size": 14,
   "ui_font_family": "TX-02",
-  "ui_font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
+  "ui_font_fallbacks": [
+    "Berkeley Mono Variable",
+    "Berkeley Mono",
+    "JetBrains Mono NL"
+  ],
   "ui_font_weight": 700,
   "buffer_font_family": "TX-02",
-  "buffer_font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
+  "buffer_font_fallbacks": [
+    "Berkeley Mono Variable",
+    "Berkeley Mono",
+    "JetBrains Mono NL"
+  ],
   "buffer_font_weight": 500,
   "buffer_font_size": 13,
   "buffer_font_features": {
@@ -168,23 +180,23 @@
   "languages": {
     "TypeScript": {
       "format_on_save": "off",
-      "show_inline_completions": true
+      "show_edit_predictions": true
     },
     "Lua": {
-      "show_inline_completions": true,
+      "show_edit_predictions": true,
       "tab_size": 2
     },
     "Zig": {
-      "show_inline_completions": true
+      "show_edit_predictions": true
     },
     "Go": {
-      "show_inline_completions": true
+      "show_edit_predictions": true
     },
     "HTML": {
       "format_on_save": "off"
     },
     "CSS": {
-      "show_inline_completions": true,
+      "show_edit_predictions": true,
       "format_on_save": "on",
       "tab_size": 2
     },
@@ -194,16 +206,16 @@
     },
     "Ruby": {
       "format_on_save": "on",
-      "show_inline_completions": true,
+      "show_edit_predictions": true,
       "tab_size": 2,
       "language_servers": ["!solargraph", "!rubocop", "ruby-lsp"]
     },
     "JavaScript": {
       "format_on_save": "off",
-      "show_inline_completions": true
+      "show_edit_predictions": true
     },
     "Markdown": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     },
     "YAML": {
       "format_on_save": "off"

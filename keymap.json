@@ -2,26 +2,26 @@
   {
     "bindings": {
       // Move between tabs
-      "cmd-[": "pane::ActivatePrevItem",
+      "cmd-[": "pane::ActivatePreviousItem",
       "cmd-]": "pane::ActivateNextItem",
 
       // Switch focus on windows
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
 
       // Move items to different panes
-      "ctrl-shift-h": ["workspace::MoveItemToPaneInDirection", { "direction": "Left", "focus": true }],
-      "ctrl-shift-l": ["workspace::MoveItemToPaneInDirection", { "direction": "Right", "focus": true }],
-      "ctrl-shift-k": ["workspace::MoveItemToPaneInDirection", { "direction": "Up", "focus": true }],
-      "ctrl-shift-j": ["workspace::MoveItemToPaneInDirection", { "direction": "Down", "focus": true }],
+      "ctrl-shift-h": ["workspace::MoveItemToPaneInDirection", { "direction": "left", "focus": true }],
+      "ctrl-shift-l": ["workspace::MoveItemToPaneInDirection", { "direction": "right", "focus": true }],
+      "ctrl-shift-k": ["workspace::MoveItemToPaneInDirection", { "direction": "up", "focus": true }],
+      "ctrl-shift-j": ["workspace::MoveItemToPaneInDirection", { "direction": "down", "focus": true }],
 
       // Resize windows
-      "ctrl-cmd-h": ["vim::ResizePane", "Narrow"],
-      "ctrl-cmd-l": ["vim::ResizePane", "Widen"],
-      "ctrl-cmd-j": ["vim::ResizePane", "Shorten"],
-      "ctrl-cmd-k": ["vim::ResizePane", "Lengthen"]
+      "ctrl-cmd-h": "vim::ResizePaneLeft",
+      "ctrl-cmd-l": "vim::ResizePaneRight",
+      "ctrl-cmd-k": "vim::ResizePaneUp",
+      "ctrl-cmd-j": "vim::ResizePaneDown"
     }
   },
   {
@@ -42,8 +42,8 @@
       // "/": ["vim::Search", { "regex": false }],
 
       // Allow j and k to navigate over wrapped lines
-      "j": ["vim::Down", { "displayLines": true }],
-      "k": ["vim::Up", { "displayLines": true }],
+      "j": ["vim::Down", { "display_lines": true }],
+      "k": ["vim::Up", { "display_lines": true }],
 
       // Disable arrow key navigation
       "up": null,
@@ -70,15 +70,15 @@
       // Toggle git blame
       "space g b": "editor::ToggleGitBlameInline",
       // Toggle git hunk
-      "space g h": "editor::ToggleHunkDiff",
+      "space g h": "editor::ToggleSelectedDiffHunks",
       // Revert git hunk
-      "space g r h": "editor::RevertSelectedHunks",
+      "space g r h": "git::Restore",
       // Open Neogit (git magit viewer)
       "space g n t": ["task::Spawn", { "task_name": "Neogit" }],
 
       // Go to next git hunk
       "] h": "editor::GoToHunk",
-      "[ h": "editor::GoToPrevHunk",
+      "[ h": "editor::GoToPreviousHunk",
       // Find file
       "space f f": "file_finder::Toggle",
       // Find words
@@ -93,7 +93,7 @@
       "space /": "editor::ToggleComments",
       // Navigating through matches
       "n": "search::SelectNextMatch",
-      "shift-n": "search::SelectPrevMatch",
+      "shift-n": "search::SelectPreviousMatch",
       // Open horizontal terminal
       "space t h": "workspace::NewTerminal",
       // Open terminal as tab
@@ -101,7 +101,7 @@
       // Close current buffer (tab)
       "space b d": "pane::CloseActiveItem",
       // Navigate to the buffer (tab) on the left or right
-      "[ b": "pane::ActivatePrevItem",
+      "[ b": "pane::ActivatePreviousItem",
       "] b": "pane::ActivateNextItem",
       "space b p": "pane::TogglePinTab",
       // Rename variable
@@ -119,12 +119,12 @@
       // Toggle inlay type hints
       "space i h": "editor::ToggleInlayHints",
       // Copy relative path
-      "space c p": "editor::CopyRelativePath",
+      "space c p": "workspace::CopyRelativePath",
       // Open task spawning popup
       "space s t": "task::Spawn",
       // Navigate to the next/prev diagnostic
       "] d": "editor::GoToDiagnostic",
-      "[ d": "editor::GoToPrevDiagnostic",
+      "[ d": "editor::GoToPreviousDiagnostic",
       // Bring up the diagnostic page
       "space x x": "diagnostics::Deploy",
 
@@ -133,7 +133,10 @@
       "space s S": "project_symbols::Toggle",
 
       // Open assistant
-      "cmd r": "assistant::ToggleFocus"
+      "cmd r": "assistant::ToggleFocus",
+
+      // Open new tab
+      "cmd-t": "workspace::NewFile"
     }
   },
   // Insert Mode
@@ -143,7 +146,7 @@
       // Code actions
       "ctrl-c ctrl-a": "editor::ToggleCodeActions",
       "ctrl-c ctrl-o": "editor::ShowCompletions",
-      "ctrl-c ctrl-c": "editor::ShowInlineCompletion",
+      "ctrl-c ctrl-c": "editor::ShowEditPrediction",
 
       // Open assistant
       "cmd r": "assistant::ToggleFocus"
@@ -197,7 +200,7 @@
       "ctrl-,": "assistant::InsertIntoEditor",
       "ctrl-c": "assistant::CopyCode",
       "ctrl-enter": "assistant::Assist",
-      "cmd-t": "assistant::NewContext"
+      "cmd-t": "assistant::NewChat"
     }
   },
   {
