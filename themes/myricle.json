@@ -75,9 +75,17 @@
         "text.accent": "#ffd866",
         "text.muted": "#939293",
         "conflict": "#78dce8",
+        "conflict.background": "#333034",
+        "conflict.border": "#78dce8",
         "created": "#a9dc76",
+        "created.background": "#333034",
+        "created.border": "#a9dc76",
         "deleted": "#ff6188",
+        "deleted.background": "#333034",
+        "deleted.border": "#ff6188",
         "modified": "#fc9867",
+        "modified.background": "#333034",
+        "modified.border": "#fc9867",
         "error": "#ff6188",
         "error.background": "#333034",
         "error.border": "#ff6188",
@@ -152,8 +160,8 @@
             "color": "#ffd866"
           },
           "attribute": {
-            "color": "#fc9867",
-            "font_style": "italic"
+            "color": "#fc9867"
+            // "font_style": "italic"
           },
           "boolean": {
             "color": "#ab9df2"
@@ -176,7 +184,7 @@
             "color": "#ab9df2"
           },
           "emphasis": {
-            "font_style": "italic"
+            // "font_style": "italic"
           },
           "emphasis.strong": {
             "font_weight": 700
@@ -258,16 +266,16 @@
             "color": "#ffd866"
           },
           "type": {
-            "color": "#78dce8",
-            "font_style": "italic"
+            "color": "#78dce8"
+            // "font_style": "italic"
           },
           "type.builtin": {
-            "color": "#78dce8",
-            "font_style": "italic"
+            "color": "#78dce8"
+            // "font_style": "italic"
           },
           "type.parameter": {
-            "color": "#fc9876",
-            "font_style": "italic"
+            "color": "#fc9876"
+            // "font_style": "italic"
           },
           "type.interface": {
             "color": "#78dce8"
@@ -285,12 +293,12 @@
             "color": "#c1c0c0"
           },
           "variable.parameter": {
-            "color": "#fc9876",
-            "font_style": "italic"
+            "color": "#fc9876"
+            // "font_style": "italic"
           },
           "variable.special": {
-            "color": "#c1c0c0",
-            "font_style": "italic"
+            "color": "#c1c0c0"
+            // "font_style": "italic"
           },
           "variant": {
             "color": "#ab9df2"
