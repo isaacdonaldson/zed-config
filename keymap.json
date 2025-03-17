@@ -1,6 +1,9 @@
 [
   {
     "bindings": {
+      // Global workspace close tab
+      "ctrl-shift-globct": "pane::CloseActiveItem",
+
       // Move between tabs
       "cmd-[": "pane::ActivatePreviousItem",
       "cmd-]": "pane::ActivateNextItem",
@@ -74,7 +77,10 @@
       // Revert git hunk
       "space g r h": "git::Restore",
       // Open Neogit (git magit viewer)
-      "space g n t": ["task::Spawn", { "task_name": "Neogit" }],
+      // "space g n t": ["task::Spawn", { "task_name": "Neogit" }],
+      "ctrl-shift-gd": "git::Diff",
+      "ctrl-shift-gf": "git_panel::ToggleFocus",
+      "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
 
       // Go to next git hunk
       "] h": "editor::GoToHunk",
@@ -150,6 +156,52 @@
 
       // Open assistant
       "cmd r": "assistant::ToggleFocus"
+    }
+  },
+  // Git panel
+  {
+    "context": "GitPanel",
+    "bindings": {
+      // So an abandoned space cmd does not stage file
+      "space": null,
+
+      // Close git panel
+      "ctrl-shift-gd": "git::Diff",
+      "ctrl-shift-gf": "git_panel::ToggleFocus",
+      "ctrl-shift-gc": "git_panel::Close",
+      "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-globct ctrl-shift-gf ctrl-shift-gc"],
+
+      // Switch branches
+      "space s b": "git::CheckoutBranch"
+    }
+  },
+  // Git diff views
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {
+      "ctrl-shift-gf": "git_panel::ToggleFocus",
+      "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gf space g n t"],
+      // Stage file
+      "s": "git::ToggleStaged",
+      // Unstage file
+      "u": "git::Restore"
+    }
+  },
+  // Git panel left side list of changes
+  {
+    "context": "GitPanel && ChangesList",
+    "bindings": {
+      // Stage file
+      "s": "git::StageFile",
+      // Unstage file
+      "u": "git::UnstageFile",
+      // Undo last commit
+      // "U": "git::UnstageFile",
+      "a": "git::Add",
+      // Discard/Trash a file
+      "x": "git::RestoreFile",
+      // Open the commit editor
+      "c": "git::ExpandCommitEditor"
     }
   },
   // File panel (netrw)

@@ -17,8 +17,8 @@
   "assistant": {
     "dock": "right",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "o1-preview"
+      "provider": "anthropic",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -97,18 +97,10 @@
   // Fonts
   "ui_font_size": 14,
   "ui_font_family": "TX-02",
-  "ui_font_fallbacks": [
-    "Berkeley Mono Variable",
-    "Berkeley Mono",
-    "JetBrains Mono NL"
-  ],
+  "ui_font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
   "ui_font_weight": 700,
   "buffer_font_family": "TX-02",
-  "buffer_font_fallbacks": [
-    "Berkeley Mono Variable",
-    "Berkeley Mono",
-    "JetBrains Mono NL"
-  ],
+  "buffer_font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
   "buffer_font_weight": 500,
   "buffer_font_size": 13,
   "buffer_font_features": {
@@ -160,7 +152,7 @@
   },
   "tabs": {
     "git_status": true,
-    "always_show_close_button": true,
+    "show_close_button": "always",
     "activate_on_close": "left_neighbour",
     "close_position": "right",
     "file_icons": true
