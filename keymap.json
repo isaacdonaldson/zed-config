@@ -185,6 +185,8 @@
       "s": "git::ToggleStaged",
       // Unstage file
       "u": "git::Restore",
+      // Open the commit editor
+      "c": "git::ExpandCommitEditor",
 
       // Git fetch
       "space f": "git::Fetch",
@@ -210,7 +212,16 @@
       // Discard/Trash a file
       "x": "git::RestoreFile",
       // Open the commit editor
-      "c": "git::ExpandCommitEditor"
+      "c": "git::ExpandCommitEditor",
+
+      // Git fetch
+      "space f": "git::Fetch",
+      // Git pull
+      "space p": "git::Pull",
+      // Git push
+      "space P": "git::Push",
+      // Git force push
+      "space F": "git::ForcePush"
     }
   },
   // File panel (netrw)
