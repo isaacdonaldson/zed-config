@@ -76,6 +76,8 @@
       "space g h": "editor::ToggleSelectedDiffHunks",
       // Revert git hunk
       "space g r h": "git::Restore",
+      // Git change branch
+      "space s b": "git::CheckoutBranch",
       // Open Neogit (git magit viewer)
       // "space g n t": ["task::Spawn", { "task_name": "Neogit" }],
       "ctrl-shift-gd": "git::Diff",
@@ -172,7 +174,16 @@
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-globct ctrl-shift-gf ctrl-shift-gc"],
 
       // Switch branches
-      "space s b": "git::CheckoutBranch"
+      "space s b": "git::CheckoutBranch",
+
+      // Git fetch
+      "space f": "git::Fetch",
+      // Git pull
+      "space p": "git::Pull",
+      // Git push
+      "space P": "git::Push",
+      // Git force push
+      "space F": "git::ForcePush"
     }
   },
   // Git diff views
