@@ -111,6 +111,8 @@
       // Navigate to the buffer (tab) on the left or right
       "[ b": "pane::ActivatePreviousItem",
       "] b": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
       "space b p": "pane::TogglePinTab",
       // Rename variable
       "space c r": "editor::Rename",
@@ -141,7 +143,7 @@
       "space s S": "project_symbols::Toggle",
 
       // Open assistant
-      "cmd r": "assistant::ToggleFocus",
+      "cmd r": "agent::ToggleFocus",
 
       // Open new tab
       "cmd-t": "workspace::NewFile"
@@ -157,7 +159,7 @@
       "ctrl-c ctrl-c": "editor::ShowEditPrediction",
 
       // Open assistant
-      "cmd r": "assistant::ToggleFocus"
+      "cmd r": "agent::ToggleFocus"
     }
   },
   // Git panel
@@ -252,7 +254,7 @@
       // Toggle bottom dock (terminal)
       "ctrl-\\": "workspace::ToggleBottomDock",
       // Open assistant
-      "cmd r": "assistant::ToggleFocus",
+      "cmd r": "agent::ToggleFocus",
       // Open Neogit (git magit viewer)
       "space g n t": ["task::Spawn", { "task_name": "Neogit" }]
     }
@@ -283,7 +285,7 @@
       "ctrl-,": "assistant::InsertIntoEditor",
       "ctrl-c": "assistant::CopyCode",
       "ctrl-enter": "assistant::Assist",
-      "cmd-t": "assistant::NewChat"
+      "cmd-t": "agent::NewThread"
     }
   },
   {
