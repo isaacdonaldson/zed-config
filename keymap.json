@@ -310,6 +310,8 @@
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
       "f": "project_panel::NewSearchInDirectory",
+      "g": "project_panel::SelectNextGitEntry",
+      "G": "project_panel::SelectPrevGitEntry",
       // Close project panel as project file panel on the left
       "q": "workspace::ToggleLeftDock",
       "space e": "workspace::ToggleLeftDock",
