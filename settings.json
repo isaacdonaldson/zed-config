@@ -9,17 +9,20 @@
 {
   // Hide profile picture in titlebar
   "features": {
+    // WORK: "edit_prediction_provider": "copilot"
     "edit_prediction_provider": "copilot"
   },
   "icon_theme": "Material Icon Theme",
   "show_user_picture": false,
   // Assistant panel (AI)
-  "assistant": {
-    "default_profile": "write",
+  "agent": {
+    // WORK: "enabled": false,
+    "always_allow_tool_actions": true,
+    "default_profile": "minimal",
     "dock": "right",
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
@@ -41,12 +44,22 @@
     "button": false,
     "dock": "left"
   },
+  // Show branch in title bar
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_user_picture": false,
+    "show_onboarding_banner": false
+  },
+  // Hide some UI elements
+  "search": {
+    "button": false
+  },
   // Make the line numbers relative to the cursor
   "relative_line_numbers": true,
   // Gutter where line numbers and git status is
   "gutter": {
-    "code_actions": false,
-    "runnables": false,
+    "code_actions": true,
+    "runnables": true,
     "line_numbers": true,
     "folds": false
   },
@@ -61,6 +74,15 @@
   },
   // Vim emulation mode
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "cursor_shape": {
+      "normal": "block",
+      "insert": "bar",
+      "replace": "hollow",
+      "visual": "block"
+    }
+  },
   // Cursor stays solid
   "cursor_blink": false,
   // Hide scrollbar
@@ -96,14 +118,14 @@
     "metrics": false
   },
   // Fonts
-  "ui_font_size": 14,
+  "ui_font_size": 12,
+  "ui_font_weight": 700,
   "ui_font_family": "TX-02",
   "ui_font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
-  "ui_font_weight": 700,
+  "buffer_font_size": 12,
+  "buffer_font_weight": 500,
   "buffer_font_family": "TX-02",
   "buffer_font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
-  "buffer_font_weight": 500,
-  "buffer_font_size": 13,
   "buffer_font_features": {
     "calt": false,
     "liga": false,
@@ -112,7 +134,7 @@
     "zero": true
   },
   "buffer_line_height": {
-    "custom": 1.5
+    "custom": 1.3
   },
   // File Tree
   "project_panel": {
@@ -127,8 +149,10 @@
   // Terminal
   "terminal": {
     "dock": "bottom",
-    "font_family": "Berkeley Mono Variable",
-    "font_size": 14,
+    "font_size": 12,
+    "font_weight": 600,
+    "font_family": "TX-02",
+    "font_fallbacks": ["Berkeley Mono Variable", "Berkeley Mono", "JetBrains Mono NL"],
     "line_height": "standard",
     "option_as_meta": true,
     "working_directory": "current_project_directory",
@@ -171,6 +195,9 @@
   "use_autoclose": false,
   // Language Overrides
   "languages": {
+    "TOML": {
+      "format_on_save": "on"
+    },
     "TypeScript": {
       "format_on_save": "off",
       "show_edit_predictions": true
@@ -240,7 +267,13 @@
     },
     "rust-analyzer": {
       "initialization_options": {
+        "imports": {
+          "granularity": {
+            "group": "module"
+          }
+        },
         "inlayHints": {
+          "enable": "skip_trivial",
           "lifetimeElisionHints": {
             "enable": "skip_trivial",
             "useParameterNames": true

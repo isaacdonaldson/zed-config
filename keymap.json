@@ -43,6 +43,7 @@
     "bindings": {
       // Turn off regex when searching with /
       // "/": ["vim::Search", { "regex": false }],
+      "/": "buffer_search::Deploy",
 
       // Allow j and k to navigate over wrapped lines
       "j": ["vim::Down", { "display_lines": true }],
@@ -59,8 +60,8 @@
       "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
       "g I": "editor::GoToImplementationSplit",
-      "g t": "editor::GoToTypeDefinition",
-      "g T": "editor::GoToTypeDefinitionSplit",
+      "g y": "editor::GoToTypeDefinition",
+      "g Y": "editor::GoToTypeDefinitionSplit",
 
       // Split panel in direction
       "space s d": "pane::SplitDown",
@@ -72,6 +73,8 @@
 
       // Toggle git blame
       "space g b": "editor::ToggleGitBlameInline",
+      // Toggle git blame for the whole file
+      "space g B": "git::Blame",
       // Toggle git hunk
       "space g h": "editor::ToggleSelectedDiffHunks",
       // Revert git hunk
@@ -80,6 +83,7 @@
       "space s b": "git::CheckoutBranch",
       // Open Neogit (git magit viewer)
       // "space g n t": ["task::Spawn", { "task_name": "Neogit" }],
+      // Open git editor
       "ctrl-shift-gd": "git::Diff",
       "ctrl-shift-gf": "git_panel::ToggleFocus",
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
@@ -94,7 +98,7 @@
       // Format file
       "space u f": "editor::Format",
       // Toggle left dock (file-tree)
-      "space e": "workspace::ToggleLeftDock",
+      "space e": "project_panel::ToggleFocus",
       // Open file in file-tree
       "space o e": "pane::RevealInProjectPanel",
       // Toggle comments
@@ -146,7 +150,38 @@
       "cmd r": "agent::ToggleFocus",
 
       // Open new tab
-      "cmd-t": "workspace::NewFile"
+      "cmd-t": "workspace::NewFile",
+
+      // List all current Marks
+      "space m l": "vim::ToggleMarksView",
+
+      // Set Marks
+      "ctrl-shift-pshmrk": "vim::PushMark",
+      "space m s 1": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk a"],
+      "space m s 2": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk b"],
+      "space m s 3": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk c"],
+      "space m s 4": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk d"],
+      "space m s 5": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk e"],
+      "space m s 6": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk f"],
+      "space m s 7": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk g"],
+      "space m s 8": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk h"],
+      "space m s 9": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk i"],
+      "space m s 0": ["workspace::SendKeystrokes", "ctrl-shift-pshmrk j"],
+
+      // Navigate to Marks
+      "space 1": ["workspace::SendKeystrokes", "` a z z"],
+      "space 2": ["workspace::SendKeystrokes", "` b z z"],
+      "space 3": ["workspace::SendKeystrokes", "` c z z"],
+      "space 4": ["workspace::SendKeystrokes", "` d z z"],
+      "space 5": ["workspace::SendKeystrokes", "` e z z"],
+      "space 6": ["workspace::SendKeystrokes", "` f z z"],
+      "space 7": ["workspace::SendKeystrokes", "` g z z"],
+      "space 8": ["workspace::SendKeystrokes", "` h z z"],
+      "space 9": ["workspace::SendKeystrokes", "` i z z"],
+      "space 0": ["workspace::SendKeystrokes", "` j z z"],
+
+      // Dupliacate line and comment first one
+      "Y Y": ["workspace::SendKeystrokes", "y y g c c p"]
     }
   },
   // Insert Mode
@@ -198,6 +233,8 @@
       "s": "git::ToggleStaged",
       // Unstage file
       "u": "git::Restore",
+      // Discard file
+      "x": "git::Restore",
       // Open the commit editor
       "c": "git::ExpandCommitEditor",
 
@@ -255,8 +292,11 @@
       "ctrl-\\": "workspace::ToggleBottomDock",
       // Open assistant
       "cmd r": "agent::ToggleFocus",
-      // Open Neogit (git magit viewer)
-      "space g n t": ["task::Spawn", { "task_name": "Neogit" }]
+
+      // Open git editor
+      "ctrl-shift-gd": "git::Diff",
+      "ctrl-shift-gf": "git_panel::ToggleFocus",
+      "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"]
     }
   },
   // Terminal panel
