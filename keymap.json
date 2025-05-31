@@ -377,6 +377,7 @@
       "ctrl-shift-gf": "git_panel::ToggleFocus",
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
 
+      // Git commands for after the commit has happened and no changes are left
       // Git fetch
       "space f": "git::Fetch",
       // Git pull
