@@ -87,6 +87,17 @@
     "shell": "system"
   },
   {
+    "label": "Git rebase last commit",
+    "command": "git rebase -i HEAD~2",
+    "tags": ["rebase", "commit", "git", "last"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system",
+    "reveal_target": "center"
+  },
+  {
     "label": "Git rebase to master",
     "command": "echo 'git checkout master' && echo 'git pull' && echo 'git checkout <your_branch>' && echo 'git rebase origin/master' && echo 'git push -f origin <your_branch>'",
     "tags": ["git", "rebase"],

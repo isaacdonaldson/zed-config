@@ -4,6 +4,9 @@
       // Global workspace close tab
       "ctrl-shift-globct": "pane::CloseActiveItem",
 
+      // Rebase last commit
+      "ctrl-shift-rebase": ["task::Spawn", { "task_name": "Git rebase last commit" }],
+
       // Move between tabs
       "cmd-[": "pane::ActivatePreviousItem",
       "cmd-]": "pane::ActivateNextItem",
@@ -87,6 +90,8 @@
       "ctrl-shift-gd": "git::Diff",
       "ctrl-shift-gf": "git_panel::ToggleFocus",
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
+      // Git rebase last commit
+      "space r c": ["workspace::SendKeystrokes", "ctrl-shift-rebase"],
 
       // Go to next git hunk
       "] h": "editor::GoToHunk",
@@ -218,6 +223,9 @@
       // Toggle file-tree
       "space e": "project_panel::ToggleFocus",
 
+      // Git rebase last commit
+      "space r c": ["workspace::SendKeystrokes", "ctrl-shift-rebase"],
+
       // Close git panel
       "ctrl-shift-gd": "git::Diff",
       "ctrl-shift-gf": "git_panel::ToggleFocus",
@@ -247,13 +255,17 @@
       "enter": "editor::OpenExcerpts",
       // Navigate to next/previous match
       "tab": "editor::ToggleFold",
+
+      // Git rebase last commit
+      "space r c": ["workspace::SendKeystrokes", "ctrl-shift-rebase"],
+
       // Close git diff view
       "ctrl-shift-gf": "git_panel::ToggleFocus",
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gf space g n t"],
       // Stage file
       "s": "git::ToggleStaged",
       // Unstage file
-      "u": "git::Restore",
+      "u": "git::ToggleStaged",
       // Discard file
       "x": "git::Restore",
       // Open the commit editor
@@ -276,6 +288,10 @@
       // Toggle file-tree
       "space e": "project_panel::ToggleFocus",
       "tab": "editor::ToggleFold",
+
+      // Git rebase last commit
+      "space r c": ["workspace::SendKeystrokes", "ctrl-shift-rebase"],
+
       // Stage file
       "s": "git::StageFile",
       // Unstage file
@@ -323,7 +339,10 @@
       // Open git editor
       "ctrl-shift-gd": "git::Diff",
       "ctrl-shift-gf": "git_panel::ToggleFocus",
-      "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"]
+      "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
+
+      // Git rebase last commit
+      "space r c": ["workspace::SendKeystrokes", "ctrl-shift-rebase"]
     }
   },
   // Terminal panel
@@ -386,6 +405,10 @@
       "space P": "git::Push",
       // Git force push
       "space F": "git::ForcePush",
+      // Close current buffer (tab)
+      "space b d": "pane::CloseActiveItem",
+      // Git rebase last commit
+      "space r c": ["workspace::SendKeystrokes", "ctrl-shift-rebase"],
 
       // Find file
       "space f f": "file_finder::Toggle",
