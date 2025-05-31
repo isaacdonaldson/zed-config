@@ -97,7 +97,7 @@
       "space f w": "workspace::NewSearch",
       // Format file
       "space u f": "editor::Format",
-      // Toggle left dock (file-tree)
+      // Toggle file-tree
       "space e": "project_panel::ToggleFocus",
       // Open file in file-tree
       "space o e": "pane::RevealInProjectPanel",
@@ -180,8 +180,11 @@
       "space 9": ["workspace::SendKeystrokes", "` i z z"],
       "space 0": ["workspace::SendKeystrokes", "` j z z"],
 
-      // Dupliacate line and comment first one
-      "Y Y": ["workspace::SendKeystrokes", "y y g c c p"]
+      // Restore Visual Selection
+      "ctrl-alt-restVsel": "vim::RestoreVisualSelection",
+
+      // Duplicate line and comment first one
+      "shift-y shift-y": ["workspace::SendKeystrokes", "y y g c c p"]
     }
   },
   // Insert Mode
@@ -197,12 +200,23 @@
       "cmd r": "agent::ToggleFocus"
     }
   },
+  // Visual Mode
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "ctrl-alt-swapselend": "editor::SwapSelectionEnds",
+      "shift-y": ["workspace::SendKeystrokes", "y ctrl-alt-restVsel g c ctrl-alt-restVsel ctrl-alt-swapselend p P"]
+    }
+  },
   // Git panel
   {
     "context": "GitPanel",
     "bindings": {
       // So an abandoned space cmd does not stage file
       "space": null,
+
+      // Toggle file-tree
+      "space e": "project_panel::ToggleFocus",
 
       // Close git panel
       "ctrl-shift-gd": "git::Diff",
@@ -227,6 +241,13 @@
   {
     "context": "GitDiff > Editor",
     "bindings": {
+      // Toggle file-tree
+      "space e": "project_panel::ToggleFocus",
+      // Open file from search result
+      "enter": "editor::OpenExcerpts",
+      // Navigate to next/previous match
+      "tab": "editor::ToggleFold",
+      // Close git diff view
       "ctrl-shift-gf": "git_panel::ToggleFocus",
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gf space g n t"],
       // Stage file
@@ -252,6 +273,9 @@
   {
     "context": "GitPanel && ChangesList",
     "bindings": {
+      // Toggle file-tree
+      "space e": "project_panel::ToggleFocus",
+      "tab": "editor::ToggleFold",
       // Stage file
       "s": "git::StageFile",
       // Unstage file
@@ -285,6 +309,7 @@
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
+      "f": "project_panel::NewSearchInDirectory",
       // Close project panel as project file panel on the left
       "q": "workspace::ToggleLeftDock",
       "space e": "workspace::ToggleLeftDock",
@@ -303,6 +328,8 @@
   {
     "context": "Terminal",
     "bindings": {
+      // Toggle terminal vi mode
+      // "ctrl-shift-t": "terminal::ToggleViMode",
       // New terminal tab
       "cmd-t": "workspace::NewTerminal",
 
@@ -314,6 +341,18 @@
 
       // Toggling the terminal
       "ctrl-\\": "workspace::ToggleBottomDock"
+    }
+  },
+  // Search panel
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Toggle file-tree
+      "space e": "project_panel::ToggleFocus",
+      // Open file from search result
+      "enter": "editor::OpenExcerpts",
+      // Fold and unfold search results
+      "tab": "editor::ToggleFold"
     }
   },
   // Assistant panel
@@ -331,12 +370,16 @@
   {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
+      // Open git editor
+      "ctrl-shift-gd": "git::Diff",
+      "ctrl-shift-gf": "git_panel::ToggleFocus",
+      "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
       // Find file
       "space f f": "file_finder::Toggle",
       // Find words
       "space f w": "workspace::NewSearch",
-      // Toggle left dock (file-tree)
-      "space e": "workspace::ToggleLeftDock"
+      // Toggle file-tree
+      "space e": "project_panel::ToggleFocus"
     }
   }
 ]

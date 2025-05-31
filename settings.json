@@ -47,13 +47,25 @@
   // Show branch in title bar
   "title_bar": {
     "show_branch_icon": true,
+    "show_sign_in": false,
     "show_user_picture": false,
+    "show_project_items": true,
+    "show_branch_name": true,
     "show_onboarding_banner": false
   },
   // Hide some UI elements
   "search": {
     "button": false
   },
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "cargo": {
+      "show_in_status_bar": true,
+      "show_in_panel": true
+    }
+  },
+  "inline_code_actions": false,
   // Make the line numbers relative to the cursor
   "relative_line_numbers": true,
   // Gutter where line numbers and git status is
@@ -61,7 +73,7 @@
     "code_actions": true,
     "runnables": true,
     "line_numbers": true,
-    "folds": false
+    "folds": true
   },
   // File finder modal
   "file_finder": {
@@ -88,6 +100,9 @@
   // Hide scrollbar
   "scrollbar": {
     "show": "auto"
+  },
+  "minimap": {
+    "show": "always"
   },
   // Behaviours of the active panel
   "active_pane_modifiers": {
@@ -148,6 +163,7 @@
   },
   // Terminal
   "terminal": {
+    "vim_mode": true,
     "dock": "bottom",
     "font_size": 12,
     "font_weight": 600,
