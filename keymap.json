@@ -376,6 +376,16 @@
       "ctrl-shift-gd": "git::Diff",
       "ctrl-shift-gf": "git_panel::ToggleFocus",
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
+
+      // Git fetch
+      "space f": "git::Fetch",
+      // Git pull
+      "space p": "git::Pull",
+      // Git push
+      "space P": "git::Push",
+      // Git force push
+      "space F": "git::ForcePush",
+
       // Find file
       "space f f": "file_finder::Toggle",
       // Find words
