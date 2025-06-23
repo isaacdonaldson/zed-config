@@ -9,14 +9,17 @@
 {
   // Hide profile picture in titlebar
   "features": {
-    // WORK: "edit_prediction_provider": "copilot"
+    // // WORK:
+    // "edit_prediction_provider": "none"
     "edit_prediction_provider": "copilot"
   },
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Warm Charmed Icons",
   "show_user_picture": false,
   // Assistant panel (AI)
   "agent": {
-    // WORK: "enabled": false,
+    // // WORK:
+    // "enabled": false,
+    // "version": "2"
     "always_allow_tool_actions": true,
     "default_profile": "minimal",
     "dock": "right",
@@ -112,7 +115,7 @@
   // Whether or not AI suggestions are shown
   "show_edit_predictions": true,
   // Editor theme: Myricle is custom
-  "theme": "Myricle",
+  "theme": "Colorizer Pro",
   // Show indent guides
   "indent_guides": {
     "enabled": true,
@@ -211,16 +214,23 @@
   "use_autoclose": false,
   // Language Overrides
   "languages": {
-    "TOML": {
-      "format_on_save": "on"
-    },
+    // // WORK:
+    // "Lua": {
+    //   "show_edit_predictions": true,
+    //   "tab_size": 2
+    // },
+    // "Markdown": {
+    //   "show_edit_predictions": false
+    // },
+    // "TOML": {
+    //   "format_on_save": "on"
+    // },
+    // "YAML": {
+    //   "format_on_save": "off"
+    // }
     "TypeScript": {
       "format_on_save": "off",
       "show_edit_predictions": true
-    },
-    "Lua": {
-      "show_edit_predictions": true,
-      "tab_size": 2
     },
     "Zig": {
       "show_edit_predictions": true
@@ -250,8 +260,15 @@
       "format_on_save": "off",
       "show_edit_predictions": true
     },
+    "Lua": {
+      "show_edit_predictions": true,
+      "tab_size": 2
+    },
     "Markdown": {
       "show_edit_predictions": false
+    },
+    "TOML": {
+      "format_on_save": "on"
     },
     "YAML": {
       "format_on_save": "off"
@@ -259,6 +276,8 @@
   },
   // LSP
   "lsp": {
+    // // WORK:
+    // "rust-analyzer": {...}
     "solargraph": {
       "initialization_options": {
         "diagnostics": true,
@@ -350,6 +369,7 @@
     }
   },
   "file_types": {
+    // // Work: {}
     "HTML": ["*.leaf"]
   }
 }
