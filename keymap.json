@@ -4,6 +4,9 @@
       // Global workspace close tab
       "ctrl-shift-globct": "pane::CloseActiveItem",
 
+      // Make shift-escape a no-op
+      "shift-escape": null,
+
       // Rebase last commit
       "ctrl-shift-rebase": ["task::Spawn", { "task_name": "Git rebase last commit" }],
 
@@ -397,6 +400,10 @@
       "space g n t": ["workspace::SendKeystrokes", "ctrl-shift-gd ctrl-shift-g"],
 
       // Git commands for after the commit has happened and no changes are left
+      // Open the commit editor
+      "c": "git::ExpandCommitEditor",
+      // Git change branch
+      "space s b": "git::CheckoutBranch",
       // Git fetch
       "space f": "git::Fetch",
       // Git pull
